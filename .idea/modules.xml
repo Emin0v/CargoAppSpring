@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CargoDbAppJPASpring/CargoDbAppJPASpring.iml" filepath="$PROJECT_DIR$/CargoDbAppJPASpring/CargoDbAppJPASpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CargoWebApp/CargoWebApp.iml" filepath="$PROJECT_DIR$/CargoWebApp/CargoWebApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cargo.multimodule.iml" filepath="$PROJECT_DIR$/cargo.multimodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hospital.multimodule.iml" filepath="$PROJECT_DIR$/hospital.multimodule.iml" />
+    </modules>
+  </component>
+</project>

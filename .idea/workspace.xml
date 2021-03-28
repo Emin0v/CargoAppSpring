@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="CargoWebApp:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6b4edfb3-12ba-4eb2-9b7d-b091f67a25be" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1qFj4fXVHVGgrZgdYLalJz7snee" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/js" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.16503906" />
+    <property name="project.structure.side.proportion" value="0.29039812" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Eminov\IdeaProjects\CargoAppSpring\CargoWebApp\src\main\resources\static\js" />
+      <recent name="C:\Users\Eminov\IdeaProjects\CargoAppSpring\CargoWebApp\src\main\resources\static\images" />
+      <recent name="C:\Users\Eminov\IdeaProjects\CargoAppSpring\CargoWebApp\src\main\resources\static\css" />
+      <recent name="C:\Users\Eminov\IdeaProjects\CargoAppSpring\CargoWebApp\src\main\webapp\WEB-INF" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.371">
+    <configuration name="CargoWebAppJpaSpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.CargoWebAppJpaSpringApplication" />
+      <module name="CargoDbAppJPASpring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CargoWebAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="CargoWebApp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.company.CargoWebAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CargoWebAppJpaSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="CargoDbAppJPASpring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.company.CargoWebAppJpaSpringApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.371" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.371" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="CargoWebApp:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/CargoWebApp" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_CargoAppSpring" />
+        <option name="DEPLOY_TOMCAT_APPS" value="true" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52480" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="CargoWebApp:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CargoWebAppJpaSpringApplication" />
+      <item itemvalue="Spring Boot.CargoWebAppApplication" />
+      <item itemvalue="Spring Boot.CargoWebAppJpaSpringApplication" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.371" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CargoWebAppJpaSpringApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b4edfb3-12ba-4eb2-9b7d-b091f67a25be" name="Default Changelist" comment="" />
+      <created>1616682046669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616682046669</updated>
+      <workItem from="1616682048023" duration="4568000" />
+      <workItem from="1616750634259" duration="828000" />
+      <workItem from="1616751509139" duration="424000" />
+      <workItem from="1616752103322" duration="2920000" />
+      <workItem from="1616761752294" duration="6257000" />
+      <workItem from="1616827893793" duration="5346000" />
+      <workItem from="1616833472192" duration="663000" />
+      <workItem from="1616843244317" duration="5122000" />
+      <workItem from="1616923448369" duration="531000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616846427337">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1616846427337" />
+    <state width="978" height="555" key="GridCell.Tab.0.bottom" timestamp="1616848391741">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616848391741" />
+    <state width="978" height="555" key="GridCell.Tab.0.center" timestamp="1616848391740">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616848391740" />
+    <state width="978" height="555" key="GridCell.Tab.0.left" timestamp="1616848391740">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616848391740" />
+    <state width="978" height="555" key="GridCell.Tab.0.right" timestamp="1616848391740">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616848391740" />
+    <state width="978" height="555" key="GridCell.Tab.1.bottom" timestamp="1616848391742">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616848391742" />
+    <state width="978" height="555" key="GridCell.Tab.1.center" timestamp="1616848391741">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1616848391741" />
+    <state width="978" height="555" key="GridCell.Tab.1.left" timestamp="1616848391741">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1616848391741" />
+    <state width="978" height="555" key="GridCell.Tab.1.right" timestamp="1616848391742">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1616848391742" />
+    <state width="978" height="555" key="GridCell.Tab.2.bottom" timestamp="1616848391743">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616848391743" />
+    <state width="978" height="555" key="GridCell.Tab.2.center" timestamp="1616848391743">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1616848391743" />
+    <state width="978" height="555" key="GridCell.Tab.2.left" timestamp="1616848391742">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1616848391742" />
+    <state width="978" height="555" key="GridCell.Tab.2.right" timestamp="1616848391743">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="978" height="555" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1616848391743" />
+    <state x="213" y="17" key="Maven.ArtifactSearchDialog" timestamp="1616683636154">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="213" y="17" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1616683636154" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1616834137402">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1616834137402" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1616832307533">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1616832307533" />
+  </component>
+</project>
