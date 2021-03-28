@@ -19,11 +19,6 @@ public class CustomerController {
     @Autowired
     private CustomerRepository customerRepository;
 
-    @RequestMapping(method = RequestMethod.GET , value = "/login")
-    public String login(){
-        return "login";
-    }
-
     @RequestMapping(method = RequestMethod.GET, value = "/register")
     public ModelAndView registerPage() {
         ModelAndView modelAndView = new ModelAndView("register");

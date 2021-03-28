@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Cargo &mdash; Website Template by Colorlib</title>
+    <title>Cargo &mdash; Website </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -47,16 +50,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <a href="#" class=""><span class="mr-2  icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">cargo@gmail.com</span></a>
+                    <a href="#" class=""><span class="mr-2  icon-envelope-open-o"></span> <span
+                            class="d-none d-md-inline-block">cargo@gmail.com</span></a>
                     <span class="mx-md-2 d-inline-block"></span>
                     <a href="#" class=""><span class="mr-2  icon-phone"></span> <span class="d-none d-md-inline-block">+994 (50) 555 55 55</span></a>
 
 
                     <div class="float-right">
 
-                        <a href="#" class=""><span class="mr-2  icon-twitter"></span> <span class="d-none d-md-inline-block">Twitter</span></a>
+                        <a href="#" class=""><span class="mr-2  icon-twitter"></span> <span
+                                class="d-none d-md-inline-block">Twitter</span></a>
                         <span class="mx-md-2 d-inline-block"></span>
-                        <a href="#" class=""><span class="mr-2  icon-facebook"></span> <span class="d-none d-md-inline-block">Facebook</span></a>
+                        <a href="#" class=""><span class="mr-2  icon-facebook"></span> <span
+                                class="d-none d-md-inline-block">Facebook</span></a>
 
                     </div>
 
@@ -106,14 +112,35 @@
 
                             <li><a href="#blog-section" class="nav-link">Blog</a></li>
                             <li><a href="#contact-section" class="nav-link">Bizimlə Əlaqə</a></li>
-                            <button class="btn btn-warning">Qeydiyyat</button>
-                            <button class="btn btn-success">Giriş</button>
+
+                            <form action="register" method="get" style="display:inline">
+                                <button class="btn btn-warning">Qeydiyyat</button>
+                            </form>
+                            <form action="login" method="get" style="display:inline">
+                                <button class="btn btn-success">Giriş</button>
+                            </form>
+                            <%
+                                if (false) {
+                            %>
+                            <li class="has-children">
+                                <button id="profile" type="button" class="btn btn-light bg-transparent">
+                                    <i class="fa fa-user main-color"></i>
+                                    Mahammad Eminov
+                                </button>
+                                <ul class="dropdown arrow-top">
+                                    <li><a href="profile" class="nav-link">Profile</a></li>
+                                    <li><a href="logout" class="nav-link">Çıxış</a></li>
+                                </ul>
+                            </li>
+                            <%}%>
                         </ul>
                     </nav>
 
                 </div>
 
-                <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+                <div class="toggle-button d-inline-block d-lg-none"><a href="#"
+                                                                       class="site-menu-toggle py-5 js-menu-toggle text-black"><span
+                        class="icon-menu h3"></span></a></div>
 
             </div>
         </div>
@@ -121,12 +148,14 @@
     </header>
 
     <div class="ftco-blocks-cover-1">
-        <div class="ftco-cover-1 overlay" style="background-image: url('https://source.unsplash.com/pSyfecRCBQA/1920x780')">
+        <div class="ftco-cover-1 overlay"
+             style="background-image: url('https://source.unsplash.com/pSyfecRCBQA/1920x780')">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <h1>Yükünüzün keyfiyyətli çatdırılmasını seçin</h1>
-                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis fugit modi similique, suscipit, deserunt a iure.</p>
+                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
+                            fugit modi similique, suscipit, deserunt a iure.</p>
                         <form action="#">
                             <div class="form-group d-flex">
                                 <input type="text" class="form-control" placeholder="izləmə nömrəsi">
@@ -152,7 +181,8 @@
                         <a href="#"><img src="images/cargo_air_small.jpg" alt="Image" class="img-fluid"></a>
                         <div class="px-md-3">
                             <h3><a href="#">Hava nəqliyyatı</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, necessitatibus.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos,
+                                necessitatibus.</p>
                         </div>
                     </div>
                     <div class="service text-center">
@@ -174,7 +204,8 @@
                 <div class="col-md-7 text-center">
                     <div class="block-heading-1">
                         <h2>NƏ TƏKLİF EDİRİK</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur corporis dolore enim ex excepturi exercitationem iusto omnis quas tenetur?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur corporis dolore
+                            enim ex excepturi exercitationem iusto omnis quas tenetur?</p>
                     </div>
                 </div>
             </div>
@@ -232,8 +263,6 @@
     </div>
 
 
-
-
     <div class="site-section" id="about-section">
 
         <div class="container">
@@ -241,14 +270,14 @@
                 <div class="col-md-7 text-center">
                     <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
                         <h2>Haqqımızda</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolore doloribus eos iusto quis! Necessitatibus quia, ratione. Fugit illo, nam.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolore doloribus eos iusto quis!
+                            Necessitatibus quia, ratione. Fugit illo, nam.</p>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-
 
 
     <div class="site-section bg-light" id="about-section">
@@ -308,45 +337,61 @@
                 <div class="col-lg-6">
 
                     <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Sifarişi geri qaytarmaq olar?</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi esse eveniet facilis illo non odit porro, quod veniam voluptatibus? </p>
+                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Sifarişi
+                            geri qaytarmaq olar?</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi esse eveniet
+                            facilis illo non odit porro, quod veniam voluptatibus? </p>
                     </div>
 
                     <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Geri ödəmə müddəti nədir?</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet consequatur deleniti et inventore numquam obcaecati provident quasi sapiente voluptatum? </p>
+                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Geri
+                            ödəmə müddəti nədir?</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet consequatur deleniti et
+                            inventore numquam obcaecati provident quasi sapiente voluptatum? </p>
                     </div>
 
                     <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>300 ABŞ dolları limiti nədir?</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>300
+                            ABŞ dolları limiti nədir?</h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts. </p>
                     </div>
 
                     <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Sifariş hansı müddətə çatdırılır?</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Sifariş
+                            hansı müddətə çatdırılır?</h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts. </p>
                     </div>
                 </div>
                 <div class="col-lg-6">
 
                     <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Çatdırılma ödənişi necə hesablanır?</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Çatdırılma
+                            ödənişi necə hesablanır?</h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts. </p>
                     </div>
 
                     <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Sifarişi necə izləmək olar?</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Sifarişi
+                            necə izləmək olar?</h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts. </p>
                     </div>
 
                     <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Nə sifariş edə bilərəm?</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Nə
+                            sifariş edə bilərəm?</h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts. </p>
                     </div>
 
                     <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Nə sifariş etmək olmaz?</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                        <h3 class="text-black h4 mb-4"><span class="icon-question_answer text-primary mr-2"></span>Nə
+                            sifariş etmək olmaz?</h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts. </p>
                     </div>
                 </div>
             </div>
@@ -357,15 +402,17 @@
         <div class="container">
             <div class="row d-flex no-gutters align-items-stretch">
 
-                <div class="col-12 col-lg-6 block__73422 order-lg-2" style="background-image: url('images/cargo_sea_small.jpg');" data-aos="fade-left" data-aos-delay="">
+                <div class="col-12 col-lg-6 block__73422 order-lg-2"
+                     style="background-image: url('images/cargo_sea_small.jpg');" data-aos="fade-left"
+                     data-aos-delay="">
                 </div>
-
 
 
                 <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right" data-aos-delay="">
                     <h2 class="mb-4 text-black">Nə üçün biz</h2>
                     <h4 class="text-primary">Tez və səmərəli işləyirik!</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis expedita laboriosam voluptate voluptatum. Accusamus aliquam aliquid consequatur, facilis odio ratione?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis expedita laboriosam
+                        voluptate voluptatum. Accusamus aliquam aliquid consequatur, facilis odio ratione?</p>
 
                     <ul class="ul-check primary list-unstyled mt-5">
                         <li>Vaxtında çatdırılma</li>
@@ -395,7 +442,9 @@
                     <div class="block-testimony-1 text-center">
 
                         <blockquote class="mb-4">
-                            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab atque distinctio dolor dolores eaque fuga, labore modi molestiae officiis pariatur quasi quod quos repellendus sequi tenetur totam voluptates voluptatum.&rdquo;</p>
+                            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab atque distinctio
+                                dolor dolores eaque fuga, labore modi molestiae officiis pariatur quasi quod quos
+                                repellendus sequi tenetur totam voluptates voluptatum.&rdquo;</p>
                         </blockquote>
 
                         <figure>
@@ -408,7 +457,9 @@
                 <div>
                     <div class="block-testimony-1 text-center">
                         <blockquote class="mb-4">
-                            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid commodi consequuntur cupiditate, deserunt, dolorum ex expedita fuga incidunt ipsam quae quam, vel vitae. Aperiam dicta maiores neque pariatur totam.&rdquo;</p>
+                            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid
+                                commodi consequuntur cupiditate, deserunt, dolorum ex expedita fuga incidunt ipsam quae
+                                quam, vel vitae. Aperiam dicta maiores neque pariatur totam.&rdquo;</p>
                         </blockquote>
                         <figure>
                             <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">
@@ -423,7 +474,9 @@
 
 
                         <blockquote class="mb-4">
-                            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, inventore, repudiandae. Ab earum eligendi fugit hic necessitatibus, quisquam reprehenderit! Cupiditate dolorem minus veritatis? Accusantium doloribus et nisi quae qui repudiandae.&rdquo;</p>
+                            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, inventore,
+                                repudiandae. Ab earum eligendi fugit hic necessitatibus, quisquam reprehenderit!
+                                Cupiditate dolorem minus veritatis? Accusantium doloribus et nisi quae qui repudiandae.&rdquo;</p>
                         </blockquote>
 
                         <figure>
@@ -438,7 +491,9 @@
                 <div>
                     <div class="block-testimony-1 text-center">
                         <blockquote class="mb-4">
-                            <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+                            <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and
+                                Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at
+                                the coast of the Semantics, a large language ocean.&rdquo;</p>
                         </blockquote>
 
                         <figure>
@@ -467,24 +522,30 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="mb-5 d-flex blog-entry" data-aos="fade-right" data-aos-delay="">
-                        <a href="#" class="blog-thumbnail"><img src="images/cargo_sea_small.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="#" class="blog-thumbnail"><img src="images/cargo_sea_small.jpg" alt="Image"
+                                                                class="img-fluid"></a>
                         <div class="blog-excerpt">
                             <span class="d-block text-muted">Apr 19, 2019</span>
-                            <h2 class="h4  mb-3"><a href="single.html">Knowing the Difference Is Key to Effective Logistics</a></h2>
+                            <h2 class="h4  mb-3"><a href="single.html">Knowing the Difference Is Key to Effective
+                                Logistics</a></h2>
 
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts</p>
                             <p><a href="single.html" class="text-primary">Read More</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="mb-5 d-flex blog-entry" data-aos="fade-right" data-aos-delay="">
-                        <a href="#" class="blog-thumbnail"><img src="images/cargo_air_small.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="#" class="blog-thumbnail"><img src="images/cargo_air_small.jpg" alt="Image"
+                                                                class="img-fluid"></a>
                         <div class="blog-excerpt">
                             <span class="d-block text-muted">Apr 19, 2019</span>
-                            <h2 class="h4  mb-3"><a href="single.html">Knowing the Difference Is Key to Effective Logistics</a></h2>
+                            <h2 class="h4  mb-3"><a href="single.html">Knowing the Difference Is Key to Effective
+                                Logistics</a></h2>
 
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts</p>
                             <p><a href="single.html" class="text-primary">Read More</a></p>
                         </div>
                     </div>
@@ -495,7 +556,6 @@
         </div>
     </div>
 </div>
-
 
 
 <div class="site-section bg-light" id="contact-section">
@@ -527,7 +587,8 @@
 
                     <div class="form-group row">
                         <div class="col-md-12">
-                            <textarea name="" id="" class="form-control" placeholder="mesaj yazın." cols="30" rows="10"></textarea>
+                            <textarea name="" id="" class="form-control" placeholder="mesaj yazın." cols="30"
+                                      rows="10"></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -544,8 +605,10 @@
                         <li class="d-block mb-3">
                             <span class="d-block text-black">Ünvan:</span>
                             <span>34 Street Name, City Name Here, United States</span></li>
-                        <li class="d-block mb-3"><span class="d-block text-black">Phone:</span><span>+994 50-555-55-55</span></li>
-                        <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>cargo@gmail.com</span></li>
+                        <li class="d-block mb-3"><span
+                                class="d-block text-black">Phone:</span><span>+994 50-555-55-55</span></li>
+                        <li class="d-block mb-3"><span
+                                class="d-block text-black">Email:</span><span>cargo@gmail.com</span></li>
                     </ul>
                 </div>
             </div>
@@ -561,7 +624,8 @@
                 <div class="row">
                     <div class="col-md-7">
                         <h2 class="footer-heading mb-4">Haqqımızda</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there live the blind texts. </p>
                     </div>
                     <div class="col-md-4 ml-auto">
                         <h2 class="footer-heading mb-4">Features</h2>
@@ -581,9 +645,11 @@
                     <h2 class="footer-heading mb-4">Abunə</h2>
                     <form action="#" method="post" class="footer-suscribe-form">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                            <input type="text" class="form-control border-secondary text-white bg-transparent"
+                                   placeholder="Email" aria-label="Enter Email" aria-describedby="button-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary text-white" type="button" id="button-addon2">Abunə ol</button>
+                                <button class="btn btn-primary text-white" type="button" id="button-addon2">Abunə ol
+                                </button>
                             </div>
                         </div>
                 </div>
@@ -601,7 +667,7 @@
             <div class="col-md-12">
                 <div class="border-top pt-5">
                     <p class="copyright">
-                           <h3>Mahammad Eminov</h3>
+                    <h3>Mahammad Eminov</h3>
                     </p>
                 </div>
             </div>

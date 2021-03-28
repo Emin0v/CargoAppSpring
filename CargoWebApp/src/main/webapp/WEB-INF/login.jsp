@@ -11,29 +11,28 @@
 
     <link rel="stylesheet" href="css/login.css">
 
-    <script>
-        function deleteAlert() {
+<%--    <script>--%>
+<%--        function deleteAlert() {--%>
 
-            setTimeout(() => {
-                const div = document.getElementById("message");
-                div.innerHTML='';
-            }, 5000);
+<%--            setTimeout(function(){--%>
+<%--                $('#message').remove();--%>
+<%--            }, 5000);--%>
+<%--        }--%>
 
-        }
-    </script>
+<%--    </script>--%>
 
 </head>
 <body style="background-image: url('images/cargopic.jpg') !important;">
 
-<%
-    if (request.getAttribute("message") != null) {
-%>
-  <div id = "message" class="alert alert-success" role="alert" onplay="deleteAlert()">
+<%--<%--%>
+<%--    if (request.getAttribute("message") != null) {--%>
+<%--%>--%>
+  <div id = "message" class="alert alert-success" role="alert" >
     Successful Registration!
   </div>
-<%
-    }
-%>
+<%--<%--%>
+<%--    }--%>
+<%--%>--%>
 
 <form action="login" method="post">
     <div id="formWrapper">
@@ -61,6 +60,12 @@
     </div>
 </form>
 
+<script>
+    $( document ).ready(function() {
+        $('#message').delay(1000).show(0);
+    });
+    // $('#message').hide(0).delay(1000).show(0);
+</script>
 
 </body>
 </html>
