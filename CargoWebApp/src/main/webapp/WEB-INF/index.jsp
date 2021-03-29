@@ -113,17 +113,17 @@
                             <li><a href="#blog-section" class="nav-link">Blog</a></li>
                             <li><a href="#contact-section" class="nav-link">Bizimlə Əlaqə</a></li>
 
-                            <form action="register" method="get" style="display:inline">
-                                <button class="btn btn-warning">Qeydiyyat</button>
-                            </form>
-                            <form action="login" method="get" style="display:inline">
-                                <button class="btn btn-success">Giriş</button>
-                            </form>
-                            <%
-                                if (false) {
-                            %>
+<%--                            <form action="register" method="get" style="display:inline">--%>
+<%--                                <button class="btn btn-warning">Qeydiyyat</button>--%>
+<%--                            </form>--%>
+<%--                            <form action="login" method="get" style="display:inline">--%>
+<%--                                <button class="btn btn-success">Giriş</button>--%>
+<%--                            </form>--%>
+<%--                            <%--%>
+<%--                                if (false) {--%>
+<%--                            %>--%>
                             <li class="has-children">
-                                <button id="profile" type="button" class="btn btn-light bg-transparent">
+                                <button id="profile" type="button" class="btn btn-light bg-transparent dropdown-toggle">
                                     <i class="fa fa-user main-color"></i>
                                     Mahammad Eminov
                                 </button>
@@ -132,7 +132,7 @@
                                     <li><a href="logout" class="nav-link">Çıxış</a></li>
                                 </ul>
                             </li>
-                            <%}%>
+<%--                            <%}%>--%>
                         </ul>
                     </nav>
 
