@@ -8,32 +8,14 @@
     <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
 
     <script src="js/login.js"></script>
+    <script src="js/message.js"></script>
 
     <link rel="stylesheet" href="css/login.css">
-
-<%--    <script>--%>
-<%--        function deleteAlert() {--%>
-
-<%--            setTimeout(function(){--%>
-<%--                $('#message').remove();--%>
-<%--            }, 5000);--%>
-<%--        }--%>
-
-<%--    </script>--%>
 
 </head>
 <body style="background-image: url('images/cargopic.jpg') !important;">
 
-<%--<%--%>
-<%--    if (request.getAttribute("message") != null) {--%>
-<%--%>--%>
-  <div id = "message" class="alert alert-success" role="alert" >
-    Successful Registration!
-  </div>
-<%--<%--%>
-<%--    }--%>
-<%--%>--%>
-
+<div id="message"></div>
 <form action="login" method="post">
     <div id="formWrapper">
 
@@ -59,13 +41,15 @@
         </div>
     </div>
 </form>
-
+<%
+    if (request.getAttribute("message")!=null) {
+%>
 <script>
-    $( document ).ready(function() {
-        $('#message').delay(1000).show(0);
-    });
-    // $('#message').hide(0).delay(1000).show(0);
+    displayMessage("success" , "Successful Registration!");
 </script>
 
+<%
+    }
+%>
 </body>
 </html>
