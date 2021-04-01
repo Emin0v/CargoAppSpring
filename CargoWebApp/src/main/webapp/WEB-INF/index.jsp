@@ -80,7 +80,7 @@
 
 
                 <div class="site-logo">
-                    <a href="index.html" class="text-black"><span class="text-primary">Cargo</a>
+                    <a href="index.html" class="text-black"><span class="text-primary">Cargo</span></a>
                 </div>
 
                 <div class="col-12">
@@ -197,6 +197,8 @@
         </div>
 
     </div>
+
+
 
     <div class="site-section bg-light" id="services-section">
         <div class="container">
@@ -580,7 +582,7 @@
                             there live the blind texts. </p>
                     </div>
                     <div class="col-md-4 ml-auto">
-                        <h2 class="footer-heading mb-4">Features</h2>
+                        <h2 class="footer-heading mb-4">xüsusiyyətlər</h2>
                         <ul class="list-unstyled">
                             <li><a href="#">Haqqımızda</a></li>
                             <li><a href="#">Xidmət Şərtləri</a></li>

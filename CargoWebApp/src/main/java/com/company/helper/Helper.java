@@ -7,6 +7,7 @@ public class Helper {
 
     public static Customer mapToEntity(CustomerForm form, Customer customer) {
 
+        customer.setCustomerNumber(form.getCustomerNumber());
         customer.setCustomerName(form.getCustomerName());
         customer.setCustomerSurname(form.getCustomerSurname());
         customer.setPhone(form.getPhone());

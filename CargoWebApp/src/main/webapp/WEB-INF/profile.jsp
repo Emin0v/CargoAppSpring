@@ -18,9 +18,11 @@
 <body>
 <div id="message"></div>
 
-<span>
-                    <i class="fas fa-user-alt fa-5x" style="margin-left: 7.9em;"></i>
-                </span>
+<span style="display: flex;justify-content: center;"><i class="fas fa-user-alt fa-5x center"></i></span>
+<button class="btn btn-warning mt-1 mx-3" style="display: inline">
+    <i class="fas fa-backspace"></i>
+    Geri
+</button>
 <div class="text-center flex-column m-0 mt-3">
 
     <button class="btn btn-warning main-button mt-1 mx-1" style="display: inline">
