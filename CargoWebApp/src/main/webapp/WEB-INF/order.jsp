@@ -9,6 +9,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -17,6 +28,12 @@
         Sifariş etmək üçün aşağıdakı xanaları doldurun </h1>
 
 </div>
+
+<button class="btn shopping-card d-flex mr-2 ml-2 my-2 justify-content-center" data-toggle="modal" data-target=".bd-example-modal-lg"
+        style="border: 1px solid green;margin-left: auto;margin-right: auto;">
+    <i class="fas fa-shopping-basket fa-2x"></i>
+    <span class="notification-circle fullCenter">0</span>
+</button>
 
 <div class="row justify-content-center fullCenter m-0">
 
@@ -27,21 +44,12 @@
                 <div class="col-lg-12 no-padding">
                     <div class="form-group f-2 mt-2">
                         <label for="Orders_c_id" class="required">Ölkə <span class="required">*</span></label>
-                        <div class="dropdown bootstrap-select form-control b-input"><select
-                                class="form-control b-input" name="Orders[c_id]" id="Orders_c_id">
-                            <option value="1" selected="selected" data-percent="5" data-curr-label1="Qiymət TL"
-                                    data-curr-label2="Yekun qiymət TL">Türkiyə
-                            </option>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
                         </select>
-                            <button type="button" class="btn dropdown-toggle b-input" data-toggle="dropdown"
-                                    role="button" data-id="Orders_c_id" title="Türkiyə" aria-expanded="false">
-                                <div class="filter-option">
-                                    <div class="filter-option-inner">
-                                        <div class="filter-option-inner-inner">Türkiyə</div>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
                         <small class="errorText" data-error="c_id" style="display: none;"></small>
                     </div>
                 </div>
@@ -137,8 +145,42 @@
         </form>
 
     </div>
-
-
 </div>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Şəkil</th>
+                        <th scope="col">Məhsulun linki</th>
+                        <th scope="col">Ölkə</th>
+                        <th scope="col">Qiymət</th>
+                        <th scope="col">Yekun qiymət</th>
+                        <th scope="col">Rəng</th>
+                        <th scope="col">Ölçü</th>
+                        <th scope="col"><a href="" class="close" aria-labelledby="close cart">×</a></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td colspan="8">Səbət boşdur.</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>

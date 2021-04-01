@@ -20,9 +20,9 @@ public class CustomerController {
     @Autowired
     private CustomerRepository customerRepository;
 
-    @RequestMapping(method = RequestMethod.GET, value = "/shop")
+    @RequestMapping(method = RequestMethod.GET, value = "/order")
     public ModelAndView shop() {
-        ModelAndView modelAndView = new ModelAndView("shopping");
+        ModelAndView modelAndView = new ModelAndView("order");
         return modelAndView;
     }
 
