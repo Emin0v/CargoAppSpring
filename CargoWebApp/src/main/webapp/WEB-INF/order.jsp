@@ -20,6 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -39,16 +40,13 @@
 
     <div class="inputs-wrapper inputs-wrapper--material flex-column f-20 p-1 py-3 px-2 px-sm-5">
 
-        <form action="" method="post">
+        <form action="" method="post" id="order_form">
             <div class="row pt-3 m-0 flex-row fullCenter">
                 <div class="col-lg-12 no-padding">
                     <div class="form-group f-2 mt-2">
-                        <label for="Orders_c_id" class="required">Ölkə <span class="required">*</span></label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                        <label for="country" class="required">Ölkə <span class="required">*</span></label>
+                        <select class="form-select" aria-label="Default select example" id="country">
+                            <option value="1" selected>Turkey</option>
                         </select>
                         <small class="errorText" data-error="c_id" style="display: none;"></small>
                     </div>
@@ -91,9 +89,9 @@
                         <small class="errorText" data-error="total_price" style="display: none;"></small>
                     </div>
                     <div class="form-group f-2 mt-2">
-                        <label for="Orders_size_str" class="required">Ölçü <span class="required">*</span></label>
+                        <label for="Orders_size" class="required">Ölçü <span class="required">*</span></label>
                         <input class="form-control b-input b-input--small" value="" name="Orders[size_str]"
-                               id="Orders_size_str" type="text" maxlength="255"> <small class="errorText"
+                               id="Orders_size" type="text" maxlength="255"> <small class="errorText"
                                                                                         data-error="size_str"
                                                                                         style="display: none;"></small>
                     </div>
@@ -117,30 +115,12 @@
                 </div>
             </div>
 
+            <div id="message"></div>
+
             <div class="row pt-3 pm-0 m-0 d-flex flex-row px-5 fullCenter">
-                <div class="form-check d-flex flex-row px-1 mt-1">
-                    <input class="form-check-input" type="checkbox" id="urgent-order-main" name="urgent-order">
-                    <label class="form-check-label ml-2 my-1" for="urgent-order-main">
-                        <span class="mx-2">Təcili sifariş</span>
-                    </label>
-                    <span class="form-check__urgent-price px-2">+2 USD</span>
-                    <button class="btn btn-link py-0 px-2" type="button" data-toggle="modal"
-                            data-target="#exampleModalCenter" aria-label="Open info about fast order"><i
-                            class="fa fa-info-circle main-color"></i></button>
-                </div>
-
-
-                <button id="addNewLink" class="btn btn-light ml-1 simple-button mt-1" type="button">
+                <button id="addBucket" class="btn btn-light ml-1 mt-1">
                     Səbətə əlavə et
                 </button>
-            </div>
-
-            <div class="row pt-3 m-0 flex-row fullCenter">
-
-                <!--
-                <button class="btn btn-warning main-button go2Order" type="submit">
-                    Sifariş et            			</button>
-                -->
             </div>
         </form>
 
@@ -167,8 +147,8 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td colspan="8">Səbət boşdur.</td>
+                    <tr id="addOrder">
+                        <td>Səbət boşdur.</td>
                     </tr>
                     </tbody>
                 </table>
@@ -181,6 +161,11 @@
     </div>
 </div>
 
+<script src="js/UI.js"></script>
+<script src="js/storage.js"></script>
+<script src= "js/order.js"></script>
+
+<script src="js/project.js"></script>
 
 </body>
 </html>
