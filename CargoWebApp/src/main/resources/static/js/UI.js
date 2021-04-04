@@ -3,31 +3,37 @@ class UI {
     static addOrderToBucket(order) {
         const trElem = document.getElementById("addOrder");
 
-        trElem.innerHTML = ''; // temporary code
-
         const elements = `
-           <td>1</td>
+        <tr>
+           <td>${order.id}</td>
            <td><img src="${order.link}" class="img-fluid img-thumbnail"></td>
-           <td>${order.link}</td>
+           <td><a href="${order.link}" target="_blank">${order.link}</a></td> 
            <td>${order.country}</td>
            <td>${order.price}</td>
            <td>${order.totalPrice}</td>
            <td>${order.color}</td>
            <td>${order.size}</td>
+           <td>
+                 <button class="btn btn-danger" id = "delete-order" type="submit">
+                            <i class="fas fa-trash-alt"></i>
+                 </button>
+           </td>
+        </tr>   
         `;
 
-        trElem.innerHTML = elements;
+        trElem.innerHTML += elements;
 
     }
 
     static displayMessages(message, type) {
         const div = document.getElementById("message");
+        div.style.display="block";
         // alert div
         div.className = `alert alert-${type}`;
         div.textContent = message;
 
         setTimeout(function () {
-            div.remove();
+            div.style.display="none";
         }, 3000);
 
     }
@@ -42,5 +48,37 @@ class UI {
         element7.value = "";
         element8.value = "";
     }
+
+    static loadAllOrders(orders) {
+        const orderList = document.getElementById("addOrder");
+
+        orders.forEach(function (order) {
+            orderList.innerHTML += `
+             <tr>
+               <td>${order.id}</td>
+               <td><img src="${order.link}" class="img-fluid img-thumbnail"></td>
+               <td><a href="${order.link}" target="_blank">${order.link}</a></td>
+               <td>${order.country}</td>
+               <td>${order.price}</td>
+               <td>${order.totalPrice}</td>
+               <td>${order.color}</td>
+               <td>${order.size}</td>
+               <td>
+                 <button class="btn btn-danger" id = "delete-order" type="submit">
+                            <i class="fas fa-trash-alt"></i>
+                 </button>
+               </td>
+            </tr>
+         `;
+
+        });
+    }
+
+    static deleteOrderFromUI(element){
+
+        element.parentElement.parentElement.remove();
+    }
+
+
 
 }

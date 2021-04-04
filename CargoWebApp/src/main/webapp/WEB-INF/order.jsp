@@ -40,13 +40,13 @@
 
     <div class="inputs-wrapper inputs-wrapper--material flex-column f-20 p-1 py-3 px-2 px-sm-5">
 
-        <form action="" method="post" id="order_form">
+        <form id="order_form">
             <div class="row pt-3 m-0 flex-row fullCenter">
                 <div class="col-lg-12 no-padding">
                     <div class="form-group f-2 mt-2">
                         <label for="country" class="required">Ölkə <span class="required">*</span></label>
                         <select class="form-select" aria-label="Default select example" id="country">
-                            <option value="1" selected>Turkey</option>
+                            <option value="Turkey" selected>Turkey</option>
                         </select>
                         <small class="errorText" data-error="c_id" style="display: none;"></small>
                     </div>
@@ -118,7 +118,7 @@
             <div id="message"></div>
 
             <div class="row pt-3 pm-0 m-0 d-flex flex-row px-5 fullCenter">
-                <button id="addBucket" class="btn btn-light ml-1 mt-1">
+                <button id="addBucket" class="btn btn-primary ml-1 mt-1">
                     Səbətə əlavə et
                 </button>
             </div>
@@ -143,19 +143,17 @@
                         <th scope="col">Yekun qiymət</th>
                         <th scope="col">Rəng</th>
                         <th scope="col">Ölçü</th>
-                        <th scope="col"><a href="" class="close" aria-labelledby="close cart">×</a></th>
+                        <th scope="col">Məhsulu sil</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr id="addOrder">
-                        <td>Səbət boşdur.</td>
-                    </tr>
+                    <tbody id="addOrder">
+
                     </tbody>
                 </table>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
+                <button type="button" class="btn btn-warning">Sifariş et</button>
             </div>
         </div>
     </div>

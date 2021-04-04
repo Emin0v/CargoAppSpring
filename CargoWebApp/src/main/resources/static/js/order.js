@@ -1,7 +1,8 @@
 
 class Order{
 
-    constructor(country,link,count,price,totalPrice,size,color,note) {
+    constructor(id,country,link,count,price,totalPrice,size,color,note) {
+        this.id=id
         this.country=country;
         this.link=link;
         this.count=count;

@@ -22,21 +22,19 @@ class storage {
         return orders;
     }
 
-    // static deleteOrderToStorage(filmTitle) {
-    //
-    //     let films = this.getFilmsFromStorage();
-    //
-    //     films.forEach(function (film, index) {
-    //         if (film.title === filmTitle) {
-    //             films.splice(index, 1);
-    //         }
-    //
-    //     });
-    //
-    //     localStorage.setItem("films", JSON.stringify(films));
-    // }
+    static deleteOrderFromStorage(orderId) {
+        let orders = this.getOrdersFromStorage();
+        orders.forEach(function (order, index) {
+            if (Number(order.id) === Number(orderId)) {
+                orders.splice(index, 1);
+            }
 
-    // static clearAllFilmsFromStorage() {
-    //     localStorage.removeItem("films");
-    // }
+        });
+
+        localStorage.setItem("orders", JSON.stringify(orders));
+    }
+
+    static clearAllOrdersFromStorage() {
+        localStorage.removeItem("orders");
+    }
 }
