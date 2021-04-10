@@ -22,7 +22,7 @@
 </div>
 <div class="container">
     <f:form action="register" method="post" class="form-horizontal" role="form" modelAttribute="register">
-        <h2>Qeydiyyat</h2>
+        <h2 class="continer" style="text-align: -webkit-center;text-align: center">Qeydiyyat</h2>
         <div class="form-group">
             <label for="customerName" class="col-sm-3 control-label">Ad</label>
             <div class="col-sm-6">

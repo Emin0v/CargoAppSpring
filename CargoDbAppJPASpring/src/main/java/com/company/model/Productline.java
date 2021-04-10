@@ -26,10 +26,6 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @Table(name = "productline")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Productline.findAll", query = "SELECT p FROM Productline p"),
-    @NamedQuery(name = "Productline.findByProductline", query = "SELECT p FROM Productline p WHERE p.productline = :productline")})
 public class Productline implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -45,7 +41,7 @@ public class Productline implements Serializable {
     private String htmlDescription;
     @Lob
     @Column(name = "image")
-    private byte[] image;
+    private String image;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "productline")
     private List<Product> productList;
 
@@ -80,11 +76,11 @@ public class Productline implements Serializable {
         this.htmlDescription = htmlDescription;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

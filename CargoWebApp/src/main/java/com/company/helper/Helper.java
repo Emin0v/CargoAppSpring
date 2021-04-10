@@ -1,9 +1,12 @@
 package com.company.helper;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.company.form.CustomerForm;
 import com.company.model.Customer;
 
 public class Helper {
+
+    public static BCrypt.Hasher crypt = BCrypt.withDefaults();
 
     public static Customer mapToEntity(CustomerForm form, Customer customer) {
 
@@ -16,7 +19,7 @@ public class Helper {
         customer.setCity(form.getCity());
         customer.setCountry(form.getCountry());
         customer.setEmail(form.getEmail());
-        customer.setPassword(form.getPassword());
+        customer.setPassword(crypt.hashToString(4, form.getPassword().toCharArray()));
 
         return customer;
     }

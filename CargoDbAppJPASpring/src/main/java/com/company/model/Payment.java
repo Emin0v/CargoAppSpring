@@ -29,13 +29,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "payment")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Payment.findAll", query = "SELECT p FROM Payment p"),
-    @NamedQuery(name = "Payment.findByCustomerNumber", query = "SELECT p FROM Payment p WHERE p.customerNumber = :customerNumber"),
-    @NamedQuery(name = "Payment.findByCheckNumber", query = "SELECT p FROM Payment p WHERE p.checkNumber = :checkNumber"),
-    @NamedQuery(name = "Payment.findByPaymentDate", query = "SELECT p FROM Payment p WHERE p.paymentDate = :paymentDate"),
-    @NamedQuery(name = "Payment.findByAmount", query = "SELECT p FROM Payment p WHERE p.amount = :amount")})
 public class Payment implements Serializable {
 
     private static final long serialVersionUID = 1L;

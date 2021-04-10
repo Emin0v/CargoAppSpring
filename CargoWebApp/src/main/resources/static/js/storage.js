@@ -1,21 +1,23 @@
 class storage {
 
+   static orderAuth;
+
     static addOrderToStorage(newOrder) {
         let orders = this.getOrdersFromStorage();
 
         orders.push(newOrder);
 
-        localStorage.setItem("orders", JSON.stringify(orders));
+        localStorage.setItem(`${this.orderAuth}`, JSON.stringify(orders));
 
     }
 
     static getOrdersFromStorage() {
         let orders;
 
-        if (localStorage.getItem("orders") === null) {
+        if (localStorage.getItem(`${this.orderAuth}`) === null) {
             orders = [];
         } else {
-            orders = JSON.parse(localStorage.getItem("orders"));
+            orders = JSON.parse(localStorage.getItem(`${this.orderAuth}`));
 
         }
 
@@ -31,10 +33,10 @@ class storage {
 
         });
 
-        localStorage.setItem("orders", JSON.stringify(orders));
+        localStorage.setItem(`${this.orderAuth}`, JSON.stringify(orders));
     }
 
     static clearAllOrdersFromStorage() {
-        localStorage.removeItem("orders");
+        localStorage.removeItem(`${this.orderAuth}`);
     }
 }

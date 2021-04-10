@@ -20,18 +20,10 @@ import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
  * @author Eminov
  */
 @Entity
 @Table(name = "orderdetail")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Orderdetail.findAll", query = "SELECT o FROM Orderdetail o"),
-    @NamedQuery(name = "Orderdetail.findByOrderNumber", query = "SELECT o FROM Orderdetail o WHERE o.orderNumber = :orderNumber"),
-    @NamedQuery(name = "Orderdetail.findByQuantityOrdered", query = "SELECT o FROM Orderdetail o WHERE o.quantityOrdered = :quantityOrdered"),
-    @NamedQuery(name = "Orderdetail.findByPriceEach", query = "SELECT o FROM Orderdetail o WHERE o.priceEach = :priceEach"),
-    @NamedQuery(name = "Orderdetail.findByOrderLineNumber", query = "SELECT o FROM Orderdetail o WHERE o.orderLineNumber = :orderLineNumber")})
 public class Orderdetail implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -40,16 +32,16 @@ public class Orderdetail implements Serializable {
     @Column(name = "order_number")
     private Integer orderNumber;
     @Basic(optional = false)
-    @Column(name = "quantity_ordered")
-    private int quantityOrdered;
+    @Column(name = "count")
+    private int count;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
+    @Column(name = "color")
+    private String color;
+    @Column(name = "size")
+    private String size;
     @Basic(optional = false)
-    @Column(name = "price_each")
-    private BigDecimal priceEach;
-    @Basic(optional = false)
-    @Column(name = "order_line_number")
-    private short orderLineNumber;
-    @JoinColumn(name = "order_number", referencedColumnName = "order_number", insertable = false, updatable = false)
+    @Column(name = "price")
+    private BigDecimal price;
     @OneToOne(optional = false)
     private Order1 order1;
     @JoinColumn(name = "product_code", referencedColumnName = "product_code")
@@ -63,13 +55,6 @@ public class Orderdetail implements Serializable {
         this.orderNumber = orderNumber;
     }
 
-    public Orderdetail(Integer orderNumber, int quantityOrdered, BigDecimal priceEach, short orderLineNumber) {
-        this.orderNumber = orderNumber;
-        this.quantityOrdered = quantityOrdered;
-        this.priceEach = priceEach;
-        this.orderLineNumber = orderLineNumber;
-    }
-
     public Integer getOrderNumber() {
         return orderNumber;
     }
@@ -78,28 +63,20 @@ public class Orderdetail implements Serializable {
         this.orderNumber = orderNumber;
     }
 
-    public int getQuantityOrdered() {
-        return quantityOrdered;
+    public int getCount() {
+        return count;
     }
 
-    public void setQuantityOrdered(int quantityOrdered) {
-        this.quantityOrdered = quantityOrdered;
+    public void setCount(int count) {
+        this.count = count;
     }
 
-    public BigDecimal getPriceEach() {
-        return priceEach;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public void setPriceEach(BigDecimal priceEach) {
-        this.priceEach = priceEach;
-    }
-
-    public short getOrderLineNumber() {
-        return orderLineNumber;
-    }
-
-    public void setOrderLineNumber(short orderLineNumber) {
-        this.orderLineNumber = orderLineNumber;
+    public void setPrice(BigDecimal priceEach) {
+        this.price = priceEach;
     }
 
     public Order1 getOrder1() {
@@ -116,6 +93,22 @@ public class Orderdetail implements Serializable {
 
     public void setProductCode(Product productCode) {
         this.productCode = productCode;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 
     @Override
@@ -142,5 +135,5 @@ public class Orderdetail implements Serializable {
     public String toString() {
         return "com.company.model.Orderdetail[ orderNumber=" + orderNumber + " ]";
     }
-    
+
 }

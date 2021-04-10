@@ -29,27 +29,18 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @Table(name = "product")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Product.findAll", query = "SELECT p FROM Product p"),
-    @NamedQuery(name = "Product.findByProductCode", query = "SELECT p FROM Product p WHERE p.productCode = :productCode"),
-    @NamedQuery(name = "Product.findByProductName", query = "SELECT p FROM Product p WHERE p.productName = :productName"),
-    @NamedQuery(name = "Product.findByProductVendor", query = "SELECT p FROM Product p WHERE p.productVendor = :productVendor"),
-    @NamedQuery(name = "Product.findByBuyPrice", query = "SELECT p FROM Product p WHERE p.buyPrice = :buyPrice")})
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
     @Column(name = "product_code")
-    private String productCode;
-    @Basic(optional = false)
+    private Integer productCode;
     @Column(name = "product_name")
     private String productName;
     @Basic(optional = false)
     @Column(name = "product_vendor")
     private String productVendor;
-    @Basic(optional = false)
     @Lob
     @Column(name = "product_description")
     private String productDescription;
@@ -66,11 +57,11 @@ public class Product implements Serializable {
     public Product() {
     }
 
-    public Product(String productCode) {
+    public Product(Integer productCode) {
         this.productCode = productCode;
     }
 
-    public Product(String productCode, String productName, String productVendor, String productDescription, BigDecimal buyPrice) {
+    public Product(Integer productCode, String productName, String productVendor, String productDescription, BigDecimal buyPrice) {
         this.productCode = productCode;
         this.productName = productName;
         this.productVendor = productVendor;
@@ -78,11 +69,11 @@ public class Product implements Serializable {
         this.buyPrice = buyPrice;
     }
 
-    public String getProductCode() {
+    public Integer getProductCode() {
         return productCode;
     }
 
-    public void setProductCode(String productCode) {
+    public void setProductCode(Integer productCode) {
         this.productCode = productCode;
     }
 

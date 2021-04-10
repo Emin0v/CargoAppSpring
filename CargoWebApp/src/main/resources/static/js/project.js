@@ -12,10 +12,10 @@ const orderList = document.getElementById("addOrder");
 
 let id;
 
-addListener();
-
-function addListener() {
+function addListener(orderAuth) {
     // form.addEventListener("submit", addOrder);
+    console.log("orderAuth="+orderAuth);
+    storage.orderAuth=orderAuth;
 
     document.addEventListener("DOMContentLoaded", function () {
         let orders = storage.getOrdersFromStorage();
@@ -33,14 +33,14 @@ jQuery(document).on('click', '#addBucket', function (e) {
 function addOrder() {
     const country = countryElem.value;
     const link = ordersLink.value;
-    const count = ordersCount.value;
+    const orderCount = ordersCount.value;
     const price = ordersPrice.value;
     const totalPrice = ordersTotalPrice.value;
     const size = ordersSize.value;
     const color = ordersColor.value;
     const note = ordersNote.value;
 
-    if (country === "" || link === "" || count === "" || price === "" || totalPrice === "" || size === ""
+    if (country === "" || link === "" || orderCount === "" || price === "" || totalPrice === "" || size === ""
         || color === "") {
 
         UI.displayMessages("Zəhmət olmasa bütün xanaları doldurun", "danger");
@@ -51,7 +51,7 @@ function addOrder() {
             id = order.id + 1;
         });
 
-        const newOrder = new Order(id, country, link, count, price, totalPrice, size, color, note);
+        const newOrder = new Order(id, country, link, orderCount, price, totalPrice, size, color, note);
         UI.addOrderToBucket(newOrder);
         storage.addOrderToStorage(newOrder);
         UI.displayMessages("Səbətə əlavə olundu", "success");

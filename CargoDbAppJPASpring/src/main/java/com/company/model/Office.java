@@ -25,17 +25,6 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @Table(name = "office")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Office.findAll", query = "SELECT o FROM Office o"),
-    @NamedQuery(name = "Office.findByOfficeCode", query = "SELECT o FROM Office o WHERE o.officeCode = :officeCode"),
-    @NamedQuery(name = "Office.findByCity", query = "SELECT o FROM Office o WHERE o.city = :city"),
-    @NamedQuery(name = "Office.findByPhone", query = "SELECT o FROM Office o WHERE o.phone = :phone"),
-    @NamedQuery(name = "Office.findByAddress", query = "SELECT o FROM Office o WHERE o.address = :address"),
-    @NamedQuery(name = "Office.findByState", query = "SELECT o FROM Office o WHERE o.state = :state"),
-    @NamedQuery(name = "Office.findByCountry", query = "SELECT o FROM Office o WHERE o.country = :country"),
-    @NamedQuery(name = "Office.findByPostalCode", query = "SELECT o FROM Office o WHERE o.postalCode = :postalCode"),
-    @NamedQuery(name = "Office.findByTerritory", query = "SELECT o FROM Office o WHERE o.territory = :territory")})
 public class Office implements Serializable {
 
     private static final long serialVersionUID = 1L;

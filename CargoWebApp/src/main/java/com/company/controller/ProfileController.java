@@ -6,6 +6,8 @@ import com.company.helper.Helper;
 import com.company.model.Customer;
 import com.company.service.inter.CustomerServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -28,7 +30,8 @@ public class ProfileController {
     public ModelAndView profile() {
         ModelAndView model = new ModelAndView("profile");
 
-        Customer customer = repository.findById(1).get();
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Customer customer = repository.findByEmail(authentication.getName());
 
         model.addObject("profileform",new CustomerForm(customer));
         return model;

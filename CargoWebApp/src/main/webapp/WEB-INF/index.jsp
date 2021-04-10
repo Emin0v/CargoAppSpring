@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html lang="en">
 
 <head>
@@ -110,29 +112,33 @@
 
                             <li><a href="#why-us-section" class="nav-link">Nə üçün Biz</a></li>
 
-                            <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                            <li><a href="#testimonials-section" class="nav-link">Blog</a></li>
                             <li><a href="#contact-section" class="nav-link">Bizimlə Əlaqə</a></li>
 
-<%--                            <form action="register" method="get" style="display:inline">--%>
-<%--                                <button class="btn btn-warning">Qeydiyyat</button>--%>
-<%--                            </form>--%>
-<%--                            <form action="login" method="get" style="display:inline">--%>
-<%--                                <button class="btn btn-success">Giriş</button>--%>
-<%--                            </form>--%>
-<%--                            <%--%>
-<%--                                if (false) {--%>
-<%--                            %>--%>
+                            <%
+                                if (request.getAttribute("customer")==null) {
+                            %>
+                            <form action="register" method="get" style="display:inline">
+                                <button class="btn btn-warning">Qeydiyyat</button>
+                            </form>
+                            <form action="login" method="get" style="display:inline">
+                                <button class="btn btn-success">Giriş</button>
+                            </form>
+                            <%
+                                }
+                                if (request.getAttribute("customer")!=null) {
+                            %>
                             <li class="has-children">
                                 <button id="profile" type="button" class="btn btn-light bg-transparent dropdown-toggle">
                                     <i class="fa fa-user main-color"></i>
-                                    Mahammad Eminov
+                                    ${customer.customerName}
                                 </button>
                                 <ul class="dropdown arrow-top">
                                     <li><a href="profile" class="nav-link">Profile</a></li>
                                     <li><a href="logout" class="nav-link">Çıxış</a></li>
                                 </ul>
                             </li>
-<%--                            <%}%>--%>
+                            <%}%>
                         </ul>
                     </nav>
 

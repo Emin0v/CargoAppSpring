@@ -25,10 +25,12 @@
 </button>
 <div class="text-center flex-column m-0 mt-3">
 
-    <button class="btn btn-warning main-button mt-1 mx-1" style="display: inline">
-        Sifariş et
-        <i class="fas fa-shopping-cart"></i>
-    </button>
+    <form action="order">
+        <button class="btn btn-warning main-button mt-1 mx-1" style="display: inline">
+            Sifariş et
+            <i class="fas fa-shopping-cart"></i>
+        </button>
+    </form>
 </div>
 <div class="text-center flex-column m-0 mt-3">
                 <span class="">
@@ -50,7 +52,7 @@
                 <div class="form-group mt-4 mt-sm-2 fullWidth">
                     <label for="customerNumber" class="required">Müştəri nömrəsi<span class="required">*</span></label>
                     <input class="form-control b-input" autofocus="autofocus" name="customerNumber"
-                             id="customerNumber" value="${profileform.customerNumber}" readonly/>
+                           id="customerNumber" value="${profileform.customerNumber}" readonly/>
                 </div>
             </div>
 
@@ -130,7 +132,7 @@
 </f:form>
 
 <%
-    if (request.getAttribute("message")!=null) {
+    if (request.getAttribute("message") != null) {
 %>
 <script>
     displayMessage("success", "Successful process!");

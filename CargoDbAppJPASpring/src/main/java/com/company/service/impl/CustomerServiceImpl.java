@@ -18,4 +18,11 @@ public class CustomerServiceImpl implements CustomerServiceInter {
     public boolean updateCustomer(Customer customer) {
         return customerRepository.updateCustomer(customer);
     }
+
+    @Override
+    public Customer findByEmail(String email) {
+        return customerRepository.findByEmail(email);
+    }
+
+
 }

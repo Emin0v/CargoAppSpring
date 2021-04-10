@@ -28,30 +28,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b4edfb3-12ba-4eb2-9b7d-b091f67a25be" name="Default Changelist" comment="updateCustomer problem">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__at_favre_lib_bcrypt_0_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__at_favre_lib_bytes_0_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/OrderRepositoryCustom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/OrderRepositoryCustomImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/OfficeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/OrderdetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/EmployeeServiceInter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/OfficeServiceInter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/OrderServiceInter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/OrderdetailServiceInter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/ProductServiceInter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/RegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/CargoWebApp_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/CargoWebApp_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/CustomerRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/CustomerRepositoryCustomImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Office.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Order1.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Order1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Orderdetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Orderdetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Productline.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Productline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/CustomerServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/CustomerServiceInter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CargoWebApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/helper/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/helper/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/js/UI.js" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/js/UI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/js/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/js/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/js/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/js/project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/js/storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/js/storage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cargo.multimodule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cargo.multimodule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Interface" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -74,6 +110,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1qFj4fXVHVGgrZgdYLalJz7snee" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -89,13 +128,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16503906" />
     <property name="project.structure.side.proportion" value="0.29039812" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.company.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Eminov\IdeaProjects\CargoAppSpring\CargoDbAppJPASpring\src\main\java\com\company\service\impl" />
       <recent name="C:\Users\Eminov\IdeaProjects\CargoAppSpring\CargoWebApp\src\main\resources\static\js" />
       <recent name="C:\Users\Eminov\IdeaProjects\CargoAppSpring\CargoWebApp\src\main\resources\static\images" />
       <recent name="C:\Users\Eminov\IdeaProjects\CargoAppSpring\CargoWebApp\src\main\resources\static\css" />
@@ -247,6 +287,16 @@
       <workItem from="1617529630063" duration="35000" />
       <workItem from="1617545488937" duration="10036000" />
       <workItem from="1617612568638" duration="8239000" />
+      <workItem from="1617647393744" duration="495000" />
+      <workItem from="1617706143872" duration="5704000" />
+      <workItem from="1617729500232" duration="2762000" />
+      <workItem from="1617805555336" duration="91000" />
+      <workItem from="1617820296505" duration="2271000" />
+      <workItem from="1617866556861" duration="14782000" />
+      <workItem from="1617897662094" duration="6431000" />
+      <workItem from="1617965462098" duration="7665000" />
+      <workItem from="1617977562369" duration="7323000" />
+      <workItem from="1618049985118" duration="4954000" />
     </task>
     <task id="LOCAL-00001" summary="profile and exit button finished">
       <created>1616956693619</created>
@@ -294,14 +344,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="updateCustomer problem" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616846427337">
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618051382397">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1616846427337" />
-    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1617622448431">
+    <state x="137" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1618051382397" />
+    <state x="575" y="44" key="#com.intellij.ide.util.MemberChooser" timestamp="1618052978543">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1617622448431" />
+    <state x="575" y="44" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1618052978543" />
     <state x="513" y="73" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1617215072238">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -318,70 +368,74 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="480" y="233" key="DetectedRootsChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1617215125519" />
-    <state x="389" y="104" key="FileChooserDialogImpl" timestamp="1617456592001">
+    <state x="389" y="104" key="FileChooserDialogImpl" timestamp="1618051824531">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617456592001" />
+    <state x="389" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618051824531" />
     <state x="507" y="281" key="Github.CreateGistDialog" timestamp="1616924097123">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="281" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1616924097123" />
-    <state width="1065" height="555" key="GridCell.Tab.0.bottom" timestamp="1617627032936">
+    <state width="1065" height="527" key="GridCell.Tab.0.bottom" timestamp="1618055045943">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617627032936" />
-    <state width="1065" height="555" key="GridCell.Tab.0.center" timestamp="1617627032936">
+    <state width="1065" height="527" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618055045943" />
+    <state width="1065" height="527" key="GridCell.Tab.0.center" timestamp="1618055045942">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617627032936" />
-    <state width="1065" height="555" key="GridCell.Tab.0.left" timestamp="1617627032920">
+    <state width="1065" height="527" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618055045942" />
+    <state width="1065" height="527" key="GridCell.Tab.0.left" timestamp="1618055045942">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617627032920" />
-    <state width="1065" height="555" key="GridCell.Tab.0.right" timestamp="1617627032936">
+    <state width="1065" height="527" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618055045942" />
+    <state width="1065" height="527" key="GridCell.Tab.0.right" timestamp="1618055045942">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617627032936" />
-    <state width="1065" height="555" key="GridCell.Tab.1.bottom" timestamp="1617627032936">
+    <state width="1065" height="527" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618055045942" />
+    <state width="1065" height="527" key="GridCell.Tab.1.bottom" timestamp="1618055045944">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617627032936" />
-    <state width="1065" height="555" key="GridCell.Tab.1.center" timestamp="1617627032936">
+    <state width="1065" height="527" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618055045944" />
+    <state width="1065" height="527" key="GridCell.Tab.1.center" timestamp="1618055045944">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1617627032936" />
-    <state width="1065" height="555" key="GridCell.Tab.1.left" timestamp="1617627032936">
+    <state width="1065" height="527" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1618055045944" />
+    <state width="1065" height="527" key="GridCell.Tab.1.left" timestamp="1618055045943">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1617627032936" />
-    <state width="1065" height="555" key="GridCell.Tab.1.right" timestamp="1617627032936">
+    <state width="1065" height="527" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1618055045943" />
+    <state width="1065" height="527" key="GridCell.Tab.1.right" timestamp="1618055045944">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1617627032936" />
-    <state width="1065" height="555" key="GridCell.Tab.2.bottom" timestamp="1617627032936">
+    <state width="1065" height="527" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1618055045944" />
+    <state width="1065" height="527" key="GridCell.Tab.2.bottom" timestamp="1618055045946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617627032936" />
-    <state width="1065" height="555" key="GridCell.Tab.2.center" timestamp="1617627032936">
+    <state width="1065" height="527" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618055045946" />
+    <state width="1065" height="527" key="GridCell.Tab.2.center" timestamp="1618055045945">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1617627032936" />
-    <state width="1065" height="555" key="GridCell.Tab.2.left" timestamp="1617627032936">
+    <state width="1065" height="527" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1618055045945" />
+    <state width="1065" height="527" key="GridCell.Tab.2.left" timestamp="1618055045945">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1617627032936" />
-    <state width="1065" height="555" key="GridCell.Tab.2.right" timestamp="1617627032936">
+    <state width="1065" height="527" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1618055045945" />
+    <state width="1065" height="527" key="GridCell.Tab.2.right" timestamp="1618055045945">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1617627032936" />
-    <state x="213" y="17" key="Maven.ArtifactSearchDialog" timestamp="1616683636154">
+    <state width="1065" height="527" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1618055045945" />
+    <state x="213" y="17" key="Maven.ArtifactSearchDialog" timestamp="1617707614386">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="213" y="17" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1616683636154" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1617554255248">
+    <state x="213" y="17" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1617707614386" />
+    <state x="297" y="183" key="Registry" timestamp="1617982948728">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617554255248" />
+    <state x="297" y="183" key="Registry/0.0.1366.728@0.0.1366.728" timestamp="1617982948728" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1617982540675">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1617982540675" />
     <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1617218696955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -390,9 +444,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="561" y="144" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1617188203883" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1616832307533">
+    <state x="339" y="157" key="run.anything.popup" timestamp="1617984922082">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1616832307533" />
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1617984922082" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1617982903526">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1617982903526" />
   </component>
 </project>

@@ -6,13 +6,14 @@ class UI {
         const elements = `
         <tr>
            <td>${order.id}</td>
-           <td><img src="${order.link}" class="img-fluid img-thumbnail"></td>
-           <td><a href="${order.link}" target="_blank">${order.link}</a></td> 
-           <td>${order.country}</td>
-           <td>${order.price}</td>
-           <td>${order.totalPrice}</td>
-           <td>${order.color}</td>
-           <td>${order.size}</td>
+           <td><input type="hidden" name="image" value="${order.link}"><img src="${order.link}" class="img-fluid img-thumbnail"></td>
+           <td><input type="hidden" name="link" value="${order.link}"><a href="${order.link}" target="_blank">${order.link}</a></td> 
+           <td><input type="hidden" name="country" value="${order.country}">${order.country}</td>
+           <td><input type="hidden" name="price" value="${order.price}">${order.price}</td>
+           <td><input type="hidden" name="totalPrice" value="${order.totalPrice}">${order.totalPrice}</td>
+           <td><input type="hidden" name="count" value="${order.orderCount}">${order.orderCount}</td>
+           <td><input type="hidden" name="color" value="${order.color}">${order.color}</td>
+           <td><input type="hidden" name="size" value="${order.size}">${order.size}</td>
            <td>
                  <button class="btn btn-danger" id = "delete-order" type="submit">
                             <i class="fas fa-trash-alt"></i>
@@ -27,13 +28,13 @@ class UI {
 
     static displayMessages(message, type) {
         const div = document.getElementById("message");
-        div.style.display="block";
+        div.style.display = "block";
         // alert div
         div.className = `alert alert-${type}`;
         div.textContent = message;
 
         setTimeout(function () {
-            div.style.display="none";
+            div.style.display = "none";
         }, 3000);
 
     }
@@ -54,31 +55,31 @@ class UI {
 
         orders.forEach(function (order) {
             orderList.innerHTML += `
-             <tr>
-               <td>${order.id}</td>
-               <td><img src="${order.link}" class="img-fluid img-thumbnail"></td>
-               <td><a href="${order.link}" target="_blank">${order.link}</a></td>
-               <td>${order.country}</td>
-               <td>${order.price}</td>
-               <td>${order.totalPrice}</td>
-               <td>${order.color}</td>
-               <td>${order.size}</td>
-               <td>
+        <tr>
+           <td>${order.id}</td>
+           <td><input type="hidden" name="image" value="${order.link}"><img src="${order.link}" class="img-fluid img-thumbnail"></td>
+           <td><input type="hidden" name="link" value="${order.link}"><a href="${order.link}" target="_blank">${order.link}</a></td> 
+           <td><input type="hidden" name="country" value="${order.country}">${order.country}</td>
+           <td><input type="hidden" name="price" value="${order.price}">${order.price}</td>
+           <td><input type="hidden" name="totalPrice" value="${order.totalPrice}">${order.totalPrice}</td>
+           <td><input type="hidden" name="count" value="${order.orderCount}">${order.orderCount}</td>
+           <td><input type="hidden" name="color" value="${order.color}">${order.color}</td>
+           <td><input type="hidden" name="size" value="${order.size}">${order.size}</td>
+           <td>
                  <button class="btn btn-danger" id = "delete-order" type="submit">
                             <i class="fas fa-trash-alt"></i>
                  </button>
-               </td>
-            </tr>
+           </td>
+        </tr>     
          `;
 
         });
     }
 
-    static deleteOrderFromUI(element){
+    static deleteOrderFromUI(element) {
 
         element.parentElement.parentElement.remove();
     }
-
 
 
 }

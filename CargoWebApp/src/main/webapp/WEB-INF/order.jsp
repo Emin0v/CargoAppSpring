@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html>
 <head>
     <title>Title</title>
@@ -10,7 +12,9 @@
           integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
@@ -30,15 +34,16 @@
 
 </div>
 
-<button class="btn shopping-card d-flex mr-2 ml-2 my-2 justify-content-center" data-toggle="modal" data-target=".bd-example-modal-lg"
+<button class="btn shopping-card d-flex mr-2 ml-2 my-2 justify-content-center" data-toggle="modal"
+        data-target=".bd-example-modal-lg"
         style="border: 1px solid green;margin-left: auto;margin-right: auto;">
     <i class="fas fa-shopping-basket fa-2x"></i>
     <span class="notification-circle fullCenter">0</span>
 </button>
 
-<div class="row justify-content-center fullCenter m-0">
+<div class="row justify-content-center m-0">
 
-    <div class="inputs-wrapper inputs-wrapper--material flex-column f-20 p-1 py-3 px-2 px-sm-5">
+    <div class="flex-column f-20 p-1 py-3 px-2 px-sm-5">
 
         <form id="order_form">
             <div class="row pt-3 m-0 flex-row fullCenter">
@@ -92,8 +97,8 @@
                         <label for="Orders_size" class="required">Ölçü <span class="required">*</span></label>
                         <input class="form-control b-input b-input--small" value="" name="Orders[size_str]"
                                id="Orders_size" type="text" maxlength="255"> <small class="errorText"
-                                                                                        data-error="size_str"
-                                                                                        style="display: none;"></small>
+                                                                                    data-error="size_str"
+                                                                                    style="display: none;"></small>
                     </div>
 
                     <div class="form-group f-2 mt-2">
@@ -128,10 +133,12 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
+            <form action="order" method="post">
                 <table class="table">
                     <thead>
                     <tr>
@@ -141,6 +148,7 @@
                         <th scope="col">Ölkə</th>
                         <th scope="col">Qiymət</th>
                         <th scope="col">Yekun qiymət</th>
+                        <th scope="col">Sayı</th>
                         <th scope="col">Rəng</th>
                         <th scope="col">Ölçü</th>
                         <th scope="col">Məhsulu sil</th>
@@ -151,19 +159,24 @@
                     </tbody>
                 </table>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
-                <button type="button" class="btn btn-warning">Sifariş et</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
+                    <button type="submit" class="btn btn-warning">Sifariş et</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
 <script src="js/UI.js"></script>
 <script src="js/storage.js"></script>
-<script src= "js/order.js"></script>
+<script src="js/order.js"></script>
 
 <script src="js/project.js"></script>
+
+<script>
+    addListener('${orderAuth}');
+</script>
 
 </body>
 </html>

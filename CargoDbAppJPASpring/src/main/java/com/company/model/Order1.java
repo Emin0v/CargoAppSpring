@@ -7,20 +7,7 @@ package com.company.model;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -28,19 +15,12 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Eminov
  */
 @Entity
-@Table(name = "order")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Order1.findAll", query = "SELECT o FROM Order1 o"),
-    @NamedQuery(name = "Order1.findByOrderNumber", query = "SELECT o FROM Order1 o WHERE o.orderNumber = :orderNumber"),
-    @NamedQuery(name = "Order1.findByOrderDate", query = "SELECT o FROM Order1 o WHERE o.orderDate = :orderDate"),
-    @NamedQuery(name = "Order1.findByRequiredDate", query = "SELECT o FROM Order1 o WHERE o.requiredDate = :requiredDate"),
-    @NamedQuery(name = "Order1.findByShippedDate", query = "SELECT o FROM Order1 o WHERE o.shippedDate = :shippedDate"),
-    @NamedQuery(name = "Order1.findByStatus", query = "SELECT o FROM Order1 o WHERE o.status = :status")})
+@Table(name = "`order`")
 public class Order1 implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "order_number")
     private Integer orderNumber;
@@ -48,14 +28,12 @@ public class Order1 implements Serializable {
     @Column(name = "order_date")
     @Temporal(TemporalType.DATE)
     private Date orderDate;
-    @Basic(optional = false)
     @Column(name = "required_date")
     @Temporal(TemporalType.DATE)
     private Date requiredDate;
     @Column(name = "shipped_date")
     @Temporal(TemporalType.DATE)
     private Date shippedDate;
-    @Basic(optional = false)
     @Column(name = "status")
     private String status;
     @Lob
@@ -167,7 +145,15 @@ public class Order1 implements Serializable {
 
     @Override
     public String toString() {
-        return "com.company.model.Order1[ orderNumber=" + orderNumber + " ]";
+        return "Order1{" +
+                "orderNumber=" + orderNumber +
+                ", orderDate=" + orderDate +
+                ", requiredDate=" + requiredDate +
+                ", shippedDate=" + shippedDate +
+                ", status='" + status + '\'' +
+                ", comments='" + comments + '\'' +
+                ", customerNumber=" + customerNumber +
+                ", orderdetail=" + orderdetail +
+                '}';
     }
-    
 }
