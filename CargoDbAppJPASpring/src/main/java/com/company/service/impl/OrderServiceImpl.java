@@ -18,5 +18,10 @@ public class OrderServiceImpl implements OrderServiceInter {
         return orderRepository.save(order);
     }
 
+    @Override
+    public Order1 getOrder(int orderNumber) {
+       return orderRepository.findById(orderNumber).get();
+    }
+
 
 }

@@ -7,16 +7,7 @@ package com.company.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -28,8 +19,9 @@ public class Orderdetail implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "order_number")
+    @Column(name = "`order_number`")
     private Integer orderNumber;
     @Basic(optional = false)
     @Column(name = "count")
@@ -42,6 +34,7 @@ public class Orderdetail implements Serializable {
     @Basic(optional = false)
     @Column(name = "price")
     private BigDecimal price;
+    @JoinColumn(name = "order_number", referencedColumnName = "order_number", insertable = false, updatable = false)
     @OneToOne(optional = false)
     private Order1 order1;
     @JoinColumn(name = "product_code", referencedColumnName = "product_code")

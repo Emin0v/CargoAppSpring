@@ -4,8 +4,7 @@ import com.company.model.Order1;
 import com.company.model.Orderdetail;
 import com.company.model.Product;
 import com.company.model.Productline;
-import com.company.service.inter.CustomerServiceInter;
-import com.company.service.inter.OrderServiceInter;
+import com.company.service.inter.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -16,13 +15,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.math.BigDecimal;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Date;
 
 @Controller
 public class CustomerController {
 
     @Autowired
-    private OrderServiceInter orderService;
+    private OrderServiceInter orderServiceInter;
+
+    @Autowired
+    private OrderdetailServiceInter orderdetailServiceInter;
+
+    @Autowired
+    private ProductServiceInter productServiceInter;
+
+    @Autowired
+    private ProductlineServiceInter productlineServiceInter;
 
     @Autowired
     private CustomerServiceInter customerService;
@@ -59,10 +69,10 @@ public class CustomerController {
 
 
         order.setOrderDate(new Date());
-//        order.setStatus("active");
+        order.setStatus("active");
         order.setComments(comment);
         order.setCustomerNumber(customerService.findByEmail(authentication.getName()));
-        order.setOrderdetail(orderdetail);
+
 
         orderdetail.setCount(count);
         orderdetail.setColor(color);
@@ -72,16 +82,31 @@ public class CustomerController {
         orderdetail.setProductCode(product);
 
         product.setBuyPrice(BigDecimal.valueOf(Integer.parseInt(price)));
-        product.setProductVendor(link);
+        product.setProductVendor(getDomainName(link));
         product.setProductline(productline);
 
-        productline.setProductline(link);
+        productline.setProductline("Turkey-Azerbaijan");
         productline.setImage(image);
 
 
-        orderService.add(order);
+        productlineServiceInter.add(productline);
+        productServiceInter.addProduct(product);
+        orderServiceInter.add(order);
+        orderdetailServiceInter.addOrderdetail(orderdetail);
+
 
         return modelAndView;
+    }
+
+    private static String getDomainName(String url){
+        try {
+            URI uri = new URI(url);
+            String domain = uri.getHost();
+            return domain.startsWith("www.") ? domain.substring(4) : domain;
+        }catch (URISyntaxException ex){
+            ex.printStackTrace();
+            return url;
+        }
     }
 
 }

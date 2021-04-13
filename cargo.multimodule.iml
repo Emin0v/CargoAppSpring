@@ -8,14 +8,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework.boot:spring-boot-devtools:2.4.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework.boot:spring-boot:2.4.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework:spring-core:5.3.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework:spring-jcl:5.3.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework:spring-context:5.3.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework:spring-aop:5.3.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework:spring-beans:5.3.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework:spring-expression:5.3.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.4.1" level="project" />
   </component>
 </module>

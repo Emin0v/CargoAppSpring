@@ -22,7 +22,7 @@ public class Order1 implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "order_number")
+    @Column(name = "`order_number`")
     private Integer orderNumber;
     @Basic(optional = false)
     @Column(name = "order_date")
@@ -44,6 +44,7 @@ public class Order1 implements Serializable {
     private Customer customerNumber;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "order1")
     private Orderdetail orderdetail;
+
 
     public Order1() {
     }
