@@ -37,13 +37,17 @@ public class CustomerController {
     @Autowired
     private CustomerServiceInter customerService;
 
+    private String username;
+
 
     @RequestMapping(method = RequestMethod.GET, value = "/order")
-    public ModelAndView shop() {
+    public ModelAndView indexOrder() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        username=authentication.getName();
+
         ModelAndView modelAndView = new ModelAndView("order");
 
-        modelAndView.addObject("orderAuth",authentication.getName());
+        modelAndView.addObject("orderAuth",username);
         return modelAndView;
     }
 
@@ -94,6 +98,9 @@ public class CustomerController {
         orderServiceInter.add(order);
         orderdetailServiceInter.addOrderdetail(orderdetail);
 
+
+        modelAndView.addObject("orderAuth",username);
+        modelAndView.addObject("clearAllOrders",1);
 
         return modelAndView;
     }
