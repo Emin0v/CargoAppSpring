@@ -94,15 +94,9 @@
                 <f:errors path="confirmPassword" cssClass="error"/>
             </div>
         </div>
-
-<%--        <div class="form-group">--%>
-<%--            <div class="col-sm-9 col-sm-offset-3">--%>
-<%--                <span style="color: red"><%=request.getAttribute("message")==null?"":request.getAttribute("message")%></span>--%>
-<%--            </div>--%>
-<%--        </div>--%>
         <button type="submit" id ="confirm" class="btn btn-primary btn-block">Təsdiq</button>
         <p class="pull-left" style="font-size: 20px;"><a href="login"><small>Geri</small></a></p>
-    </f:form> <!-- /form -->
-</div> <!-- ./container -->
+    </f:form>
+</div>
 </body>
 </html>

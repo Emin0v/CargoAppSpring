@@ -4,7 +4,7 @@ import com.company.model.Order1;
 import com.company.model.Orderdetail;
 import com.company.model.Product;
 import com.company.model.Productline;
-import com.company.service.inter.*;
+import com.company.service.GlobalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -23,22 +23,14 @@ import java.util.Date;
 public class CustomerController {
 
     @Autowired
-    private OrderServiceInter orderServiceInter;
-
-    @Autowired
-    private OrderdetailServiceInter orderdetailServiceInter;
-
-    @Autowired
-    private ProductServiceInter productServiceInter;
-
-    @Autowired
-    private ProductlineServiceInter productlineServiceInter;
-
-    @Autowired
-    private CustomerServiceInter customerService;
+    private GlobalService globalService;
 
     private String username;
 
+    @RequestMapping(method = RequestMethod.GET , value = "/myorders")
+    public String myOrders(){
+        return "myorders";
+    }
 
     @RequestMapping(method = RequestMethod.GET, value = "/order")
     public ModelAndView indexOrder() {
@@ -75,7 +67,7 @@ public class CustomerController {
         order.setOrderDate(new Date());
         order.setStatus("active");
         order.setComments(comment);
-        order.setCustomerNumber(customerService.findByEmail(authentication.getName()));
+        order.setCustomerNumber(globalService.customerService.findByEmail(authentication.getName()));
 
 
         orderdetail.setCount(count);
@@ -93,10 +85,10 @@ public class CustomerController {
         productline.setImage(image);
 
 
-        productlineServiceInter.add(productline);
-        productServiceInter.addProduct(product);
-        orderServiceInter.add(order);
-        orderdetailServiceInter.addOrderdetail(orderdetail);
+        globalService.productlineService.add(productline);
+        globalService.productService.addProduct(product);
+        globalService.orderService.add(order);
+        globalService.orderdetailService.addOrderdetail(orderdetail);
 
 
         modelAndView.addObject("orderAuth",username);

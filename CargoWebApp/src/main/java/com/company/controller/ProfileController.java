@@ -33,6 +33,7 @@ public class ProfileController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Customer customer = repository.findByEmail(authentication.getName());
 
+        model.addObject("customer",customer);
         model.addObject("profileform",new CustomerForm(customer));
         return model;
     }

@@ -6,6 +6,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 @AllArgsConstructor
 @Getter
 @Setter
@@ -13,15 +17,29 @@ import lombok.Setter;
 public class CustomerForm {
 
     private Integer customerNumber;
+    @NotBlank
+    @Size(min = 2)
     private String customerName;
+    @NotBlank
+    @Size(min = 2)
     private String customerSurname;
+    @NotBlank
     private String phone;
+    @NotBlank
+    @Email
     private String email;
+    @NotBlank
     private String address;
+    @NotBlank
     private String city;
+    @NotBlank
     private String country;
+    @NotBlank
     private String postalCode;
+    @NotBlank
+    @Size(min = 6)
     private String password;
+    @NotBlank
     private String confirmPassword;
 
     public CustomerForm(Customer customer){

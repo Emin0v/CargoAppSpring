@@ -8,23 +8,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700|Oswald:400,700" rel="stylesheet">
-
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-          crossorigin="anonymous"/>
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="css/aos.css">
-
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -48,110 +31,7 @@
     </div>
 
 
-    <div class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <a href="#" class=""><span class="mr-2  icon-envelope-open-o"></span> <span
-                            class="d-none d-md-inline-block">cargo@gmail.com</span></a>
-                    <span class="mx-md-2 d-inline-block"></span>
-                    <a href="#" class=""><span class="mr-2  icon-phone"></span> <span class="d-none d-md-inline-block">+994 (50) 555 55 55</span></a>
-
-
-                    <div class="float-right">
-
-                        <a href="#" class=""><span class="mr-2  icon-twitter"></span> <span
-                                class="d-none d-md-inline-block">Twitter</span></a>
-                        <span class="mx-md-2 d-inline-block"></span>
-                        <a href="#" class=""><span class="mr-2  icon-facebook"></span> <span
-                                class="d-none d-md-inline-block">Facebook</span></a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-
-        <div class="container">
-            <div class="row align-items-center position-relative">
-
-
-                <div class="site-logo">
-                    <a href="index.html" class="text-black"><span class="text-primary">Cargo</span></a>
-                </div>
-
-                <div class="col-12">
-                    <nav class="site-navigation text-right ml-auto " role="navigation">
-
-                        <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                            <li><a href="#home-section" class="nav-link">Əsas Səhifə</a></li>
-                            <li><a href="#services-section" class="nav-link">Xidmətlər</a></li>
-
-
-                            <li class="has-children">
-                                <a href="#about-section" class="nav-link">Haqqımızda</a>
-                                <ul class="dropdown arrow-top">
-                                    <li><a href="#team-section" class="nav-link">Team</a></li>
-                                    <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
-                                    <li><a href="#faq-section" class="nav-link">FAQ</a></li>
-                                    <li class="has-children">
-                                        <a href="#">More Links</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Menu One</a></li>
-                                            <li><a href="#">Menu Two</a></li>
-                                            <li><a href="#">Menu Three</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li><a href="#why-us-section" class="nav-link">Nə üçün Biz</a></li>
-
-                            <li><a href="#testimonials-section" class="nav-link">Blog</a></li>
-                            <li><a href="#contact-section" class="nav-link">Bizimlə Əlaqə</a></li>
-
-                            <%
-                                if (request.getAttribute("customer")==null) {
-                            %>
-                            <form action="register" method="get" style="display:inline">
-                                <button class="btn btn-warning">Qeydiyyat</button>
-                            </form>
-                            <form action="login" method="get" style="display:inline">
-                                <button class="btn btn-success">Giriş</button>
-                            </form>
-                            <%
-                                }
-                                if (request.getAttribute("customer")!=null) {
-                            %>
-                            <li class="has-children">
-                                <button id="profile" type="button" class="btn btn-light bg-transparent dropdown-toggle">
-                                    <i class="fa fa-user main-color"></i>
-                                    ${customer.customerName}
-                                </button>
-                                <ul class="dropdown arrow-top">
-                                    <li><a href="profile" class="nav-link">Profile</a></li>
-                                    <li><a href="logout" class="nav-link">Çıxış</a></li>
-                                </ul>
-                            </li>
-                            <%}%>
-                        </ul>
-                    </nav>
-
-                </div>
-
-                <div class="toggle-button d-inline-block d-lg-none"><a href="#"
-                                                                       class="site-menu-toggle py-5 js-menu-toggle text-black"><span
-                        class="icon-menu h3"></span></a></div>
-
-            </div>
-        </div>
-
-    </header>
+<%@ include file="header.jsp" %>
 
     <div class="ftco-blocks-cover-1">
         <div class="ftco-cover-1 overlay"
@@ -577,79 +457,10 @@
 </div>
 
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-7">
-                        <h2 class="footer-heading mb-4">Haqqımızda</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts. </p>
-                    </div>
-                    <div class="col-md-4 ml-auto">
-                        <h2 class="footer-heading mb-4">xüsusiyyətlər</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Haqqımızda</a></li>
-                            <li><a href="#">Xidmət Şərtləri</a></li>
-                            <li><a href="#">Məxfilik</a></li>
-                            <li><a href="#">Bizimlə Əlaqə</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-4 ml-auto">
-
-                <div class="mb-5">
-                    <h2 class="footer-heading mb-4">Abunə</h2>
-                    <form action="#" method="post" class="footer-suscribe-form">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control border-secondary text-white bg-transparent"
-                                   placeholder="Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary text-white" type="button" id="button-addon2">Abunə ol
-                                </button>
-                            </div>
-                        </div>
-                </div>
-
-
-                <h2 class="footer-heading mb-4">Bizi İzləyin</h2>
-                <a href="#about-section" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-                </form>
-            </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-            <div class="col-md-12">
-                <div class="border-top pt-5">
-                    <p class="copyright">
-                    <h3>Mahammad Eminov</h3>
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</footer>
+<%@ include file="footer.jsp"%>
 
 </div>
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/aos.js"></script>
-
-<script src="js/main.js"></script>
 
 
 </body>
