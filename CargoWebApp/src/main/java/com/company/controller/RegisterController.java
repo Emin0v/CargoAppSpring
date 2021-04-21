@@ -1,8 +1,8 @@
 package com.company.controller;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.company.dao.CustomerRepository;
-import com.company.form.CustomerForm;
-import com.company.helper.Helper;
+import com.company.form.RegisterForm;
 import com.company.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,22 +20,26 @@ public class RegisterController {
     @Autowired
     private CustomerRepository customerRepository;
 
+    public BCrypt.Hasher crypt = BCrypt.withDefaults();
+
     @RequestMapping(method = RequestMethod.GET, value = "/register")
     public ModelAndView registerPage() {
         ModelAndView modelAndView = new ModelAndView("register");
-        modelAndView.addObject("register", new CustomerForm());
+        modelAndView.addObject("register", new RegisterForm());
         return modelAndView;
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/register")
-    public ModelAndView addCustomer(@Valid @ModelAttribute("register") CustomerForm form, BindingResult bindingResult) {
+    public ModelAndView addCustomer(@Valid @ModelAttribute("register") RegisterForm form, BindingResult bindingResult) {
         ModelAndView model = new ModelAndView("register");
         if (bindingResult.hasErrors()) {
             return model;
         }
 
         if (form.getPassword().equals(form.getConfirmPassword())) {
-            Customer customer = Helper.mapToEntity(form,new Customer());
+            Customer customer = form.toCustomer();
+
+            customer.setPassword(crypt.hashToString(4, form.getPassword().toCharArray()));
 
             Customer control = customerRepository.save(customer);
 

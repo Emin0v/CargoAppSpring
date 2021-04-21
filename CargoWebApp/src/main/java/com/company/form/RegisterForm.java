@@ -2,21 +2,17 @@ package com.company.form;
 
 import com.company.model.Customer;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-@AllArgsConstructor
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
-public class CustomerForm {
+@AllArgsConstructor
+public class RegisterForm extends LoginForm {
 
-    private Integer customerNumber;
     @NotBlank
     @Size(min = 2)
     private String customerName;
@@ -26,9 +22,6 @@ public class CustomerForm {
     @NotBlank
     private String phone;
     @NotBlank
-    @Email
-    private String email;
-    @NotBlank
     private String address;
     @NotBlank
     private String city;
@@ -36,18 +29,9 @@ public class CustomerForm {
     private String country;
     @NotBlank
     private String postalCode;
+    @NotBlank
+    private String confirmPassword;
 
-    public CustomerForm(Customer customer){
-        this.customerNumber = customer.getCustomerNumber();
-        this.customerName = customer.getCustomerName();
-        this.customerSurname = customer.getCustomerSurname();
-        this.phone = customer.getPhone();
-        this.email = customer.getEmail();
-        this.address = customer.getAddress();
-        this.city = customer.getCity();
-        this.country = customer.getCountry();
-        this.postalCode = customer.getPostalCode();
-    }
 
     public Customer toCustomer(){
         Customer customer = new Customer();
@@ -60,6 +44,7 @@ public class CustomerForm {
         customer.setCity(getCity());
         customer.setCountry(getCountry());
         customer.setEmail(getEmail());
+        customer.setPassword(getPassword());
 
         return customer;
     }

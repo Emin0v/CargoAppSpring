@@ -38,7 +38,7 @@
         data-target=".bd-example-modal-lg"
         style="border: 1px solid green;margin-left: auto;margin-right: auto;">
     <i class="fas fa-shopping-basket fa-2x"></i>
-    <span class="notification-circle fullCenter">0</span>
+<%--    <span class="notification-circle fullCenter">0</span>--%>
 </button>
 
 <div class="row justify-content-center m-0">

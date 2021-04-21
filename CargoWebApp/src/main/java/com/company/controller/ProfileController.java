@@ -2,7 +2,6 @@ package com.company.controller;
 
 import com.company.dao.CustomerRepository;
 import com.company.form.CustomerForm;
-import com.company.helper.Helper;
 import com.company.model.Customer;
 import com.company.service.inter.CustomerServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +32,9 @@ public class ProfileController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Customer customer = repository.findByEmail(authentication.getName());
 
-        model.addObject("customer",customer);
+
+
+        model.addObject("customer",new CustomerForm(customer));
         model.addObject("profileform",new CustomerForm(customer));
         return model;
     }
@@ -45,10 +46,10 @@ public class ProfileController {
         if (bindingResult.hasErrors()) {
             return model;
         }
-        Customer customer1 = repository.findById(form.getCustomerNumber()).get();
-        form.setPassword(customer1.getPassword());
+        Customer dbCustomer = repository.findById(form.getCustomerNumber()).get();
 
-        Customer customer = Helper.mapToEntity(form, new Customer());
+        Customer customer = form.toCustomer();
+        customer.setPassword(dbCustomer.getPassword());
 
         Boolean control = service.updateCustomer(customer);
 
