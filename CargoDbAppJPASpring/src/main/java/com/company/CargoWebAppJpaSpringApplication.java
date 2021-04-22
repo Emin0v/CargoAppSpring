@@ -2,6 +2,8 @@ package com.company;
 
 import com.company.dao.EmployeeRepository;
 import com.company.model.Employee;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,6 +23,13 @@ public class CargoWebAppJpaSpringApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CargoWebAppJpaSpringApplication.class, args);
+	}
+
+	@Bean
+	public ModelMapper getModelMapper() {
+		ModelMapper modelMapper = new ModelMapper();
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		return modelMapper;
 	}
 
 //	@Bean

@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.math.BigDecimal;
@@ -44,16 +44,7 @@ public class CustomerController {
     }
 
     @RequestMapping(method = RequestMethod.POST , value = "/order")
-    public ModelAndView toOrder(@RequestParam(value="image") String image,
-                                @RequestParam(value = "link") String link,
-                                @RequestParam(value = "country") String country,
-                                @RequestParam(value = "price") String price,
-                                @RequestParam(value = "totalPrice") String totalPrice,
-                                @RequestParam(value = "color") String color,
-                                @RequestParam(value = "size") String size,
-                                @RequestParam(value = "comment" , required = false) String comment,
-                                @RequestParam(value = "count") Integer count
-                                ){
+    public ModelAndView toOrder(@RequestBody OrderForm form){
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         ModelAndView modelAndView = new ModelAndView("order");
