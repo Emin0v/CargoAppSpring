@@ -1,9 +1,7 @@
 package com.company.controller;
 
-import com.company.model.Order1;
-import com.company.model.Orderdetail;
-import com.company.model.Product;
-import com.company.model.Productline;
+import com.company.form.OrderForm;
+import com.company.model.*;
 import com.company.service.GlobalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -46,7 +44,6 @@ public class CustomerController {
     @RequestMapping(method = RequestMethod.POST , value = "/order")
     public ModelAndView toOrder(@RequestBody OrderForm form){
 
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         ModelAndView modelAndView = new ModelAndView("order");
 
         Order1 order = new Order1();
@@ -54,27 +51,24 @@ public class CustomerController {
         Product product = new Product();
         Productline productline = new Productline();
 
-
         order.setOrderDate(new Date());
-        order.setStatus("active");
-        order.setComments(comment);
-        order.setCustomerNumber(globalService.customerService.findByEmail(authentication.getName()));
+        order.setStatus("sifariş olundu");
+        order.setComments(form.getComments());
+        order.setCustomerNumber(globalService.customerService.findById(form.getCustomerNumber()).get());
 
-
-        orderdetail.setCount(count);
-        orderdetail.setColor(color);
-        orderdetail.setSize(size);
-        orderdetail.setPrice(BigDecimal.valueOf(Integer.parseInt(totalPrice)));
+        orderdetail.setCount(form.getCount());
+        orderdetail.setColor(form.getColor());
+        orderdetail.setSize(form.getSize());
+        orderdetail.setPrice(BigDecimal.valueOf(Integer.parseInt(form.getTotalPrice())));
         orderdetail.setOrder1(order);
         orderdetail.setProductCode(product);
 
-        product.setBuyPrice(BigDecimal.valueOf(Integer.parseInt(price)));
-        product.setProductVendor(getDomainName(link));
+        product.setBuyPrice(BigDecimal.valueOf(Integer.parseInt(form.getPrice())));
+        product.setProductVendor(getDomainName(form.getLink()));
         product.setProductline(productline);
 
         productline.setProductline("Turkey-Azerbaijan");
-        productline.setImage(image);
-
+        productline.setImage(form.getImage());
 
         globalService.productlineService.add(productline);
         globalService.productService.addProduct(product);

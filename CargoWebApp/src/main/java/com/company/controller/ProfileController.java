@@ -30,9 +30,7 @@ public class ProfileController {
         ModelAndView model = new ModelAndView("profile");
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        Customer customer = repository.findByEmail(authentication.getName());
-
-
+        Customer customer = repository.findByEmail(authentication.getName()).get();
 
         model.addObject("customer",new CustomerForm(customer));
         model.addObject("profileform",new CustomerForm(customer));

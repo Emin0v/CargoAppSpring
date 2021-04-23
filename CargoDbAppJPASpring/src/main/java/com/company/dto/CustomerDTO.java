@@ -1,11 +1,14 @@
 package com.company.dto;
 
 import com.company.model.Customer;
+import com.company.model.Order1;
+import com.company.model.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -29,7 +32,7 @@ public class CustomerDTO {
     private List<OrderDTO> orderList;
     private List<RoleDTO> roles;
 
-    public CustomerDTO(Customer customer){
+    public CustomerDTO(Customer customer) {
         this.customerNumber = customer.getCustomerNumber();
         this.customerName = customer.getCustomerName();
         this.customerSurname = customer.getCustomerSurname();
@@ -41,10 +44,28 @@ public class CustomerDTO {
         this.email = customer.getEmail();
         this.payment = new PaymentDTO(customer.getPayment());
         this.salesRepEmployeeNumber = new EmployeeDTO(customer.getSalesRepEmployeeNumber());
-//        this.orderList =
-//        this.roles =
+
+        List<OrderDTO> orderList = new ArrayList<>();
+        List<Order1> order1List = customer.getOrder1List();
+
+        for (int i = 0; i < order1List.size(); i++) {
+            Order1 order1 = order1List.get(i);
+            orderList.add(new OrderDTO(order1));
+        }
+        this.orderList = orderList;
+
+        List<RoleDTO> roleDTOS = new ArrayList<>();
+        List<Role> roleList = customer.getRoles();
+
+        for (int i = 0; i < roleList.size(); i++) {
+            Role role = roleList.get(i);
+            roleDTOS.add(new RoleDTO(role));
+        }
+        this.roles = roleDTOS;
 
     }
+
+
 
 
 }

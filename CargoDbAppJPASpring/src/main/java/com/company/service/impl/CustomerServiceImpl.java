@@ -17,6 +17,11 @@ public class CustomerServiceImpl implements CustomerServiceInter {
     private CustomerRepository customerRepository;
 
     @Override
+    public Optional<Customer> findById(Integer id) {
+        return customerRepository.findById(id);
+    }
+
+    @Override
     public boolean updateCustomer(Customer customer) {
         return customerRepository.updateCustomer(customer);
     }

@@ -20,13 +20,11 @@ public class Role implements Serializable {
     @Basic(optional = false)
     @Column(name = "role")
     private String role;
-    //    @OneToMany(mappedBy = "roleId")
-//    private List<UserRole> userRoleList;
     @ManyToMany(mappedBy = "roles")
     private List<Customer> customers;
 
-    @ManyToMany(mappedBy = "roles")
-    private List<Employee> employees;
+//    @ManyToMany(mappedBy = "roles")
+//    private List<Employee> employees;
 
     public Role() {
     }
@@ -62,14 +60,6 @@ public class Role implements Serializable {
 
     public void setCustomers(List<Customer> customers) {
         this.customers = customers;
-    }
-
-    public List<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
     }
 
     @Override

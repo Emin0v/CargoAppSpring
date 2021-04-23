@@ -46,12 +46,12 @@ public class Employee implements Serializable {
     private List<Customer> customerList;
 
     // elave
-    @ManyToMany(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "user_role",
-            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")})
-    private List<Role> roles;
+//    @ManyToMany(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
+//    @JoinTable(
+//            name = "user_role",
+//            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
+//            inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")})
+//    private List<Role> roles;
 
     public Employee() {
     }
@@ -125,15 +125,6 @@ public class Employee implements Serializable {
         this.officeCode = officeCode;
     }
 
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
-
-    @XmlTransient
     public List<Customer> getCustomerList() {
         return customerList;
     }

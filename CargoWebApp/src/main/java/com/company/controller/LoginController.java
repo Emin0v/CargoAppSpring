@@ -25,8 +25,10 @@ public class LoginController {
     @RequestMapping(method = RequestMethod.GET , value = "/")
     public ModelAndView index(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        Customer customer = customerRepository.findByEmail(authentication.getName());
-
+        Customer customer =null;
+        if(authentication.getName()!="anonymousUser") {
+             customer = customerRepository.findByEmail(authentication.getName()).get();
+        }
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("customer",customer);
 
