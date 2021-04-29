@@ -1,67 +1,31 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+
 <head>
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-
-<footer class="site-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-7">
-                        <h2 class="footer-heading mb-4">Haqqımızda</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts. </p>
-                    </div>
-                    <div class="col-md-4 ml-auto">
-                        <h2 class="footer-heading mb-4">xüsusiyyətlər</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Haqqımızda</a></li>
-                            <li><a href="#">Xidmət Şərtləri</a></li>
-                            <li><a href="#">Məxfilik</a></li>
-                            <li><a href="#">Bizimlə Əlaqə</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <h2 class="footer-heading mb-4">Bizi İzləyin</h2>
-            <a href="#about-section" class="smoothscroll pl-3 pr-3"><span class="icon-facebook"></span></a>
-            <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-            <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-            </form>
-        </div>
-    </div>
-    <div class="row pt-5 mt-5 text-center">
-        <div class="col-md-12">
-            <div class="border-top pt-5">
-                <p class="copyright">
-                <h3>Mahammad Eminov</h3>
-                </p>
-            </div>
-        </div>
-
-    </div>
-    </div>
-</footer>
-
+<div class="footer-basic">
+    <footer>
+        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="#">Services</a></li>
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Mahammad Eminov © 2021</p>
+    </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/aos.js"></script>
-
-<script src="js/main.js"></script>
 
 </html>

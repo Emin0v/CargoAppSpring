@@ -26,6 +26,4 @@ public class OrderForm {
     private String link;
     private String image;
 
-
-
 }

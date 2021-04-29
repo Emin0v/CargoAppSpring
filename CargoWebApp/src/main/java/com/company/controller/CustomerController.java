@@ -4,6 +4,7 @@ import com.company.form.OrderForm;
 import com.company.model.*;
 import com.company.service.GlobalService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -38,11 +39,12 @@ public class CustomerController {
         ModelAndView modelAndView = new ModelAndView("order");
 
         modelAndView.addObject("orderAuth",username);
+        modelAndView.addObject("user",globalService.customerService.findByEmail(username).get());
         return modelAndView;
     }
 
     @RequestMapping(method = RequestMethod.POST , value = "/order")
-    public ModelAndView toOrder(@RequestBody OrderForm form){
+    public ModelAndView toOrder(OrderForm form){
 
         ModelAndView modelAndView = new ModelAndView("order");
 

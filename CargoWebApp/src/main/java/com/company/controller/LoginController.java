@@ -3,6 +3,7 @@ package com.company.controller;
 import com.company.dao.CustomerRepository;
 import com.company.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -22,11 +23,11 @@ public class LoginController {
         return modelAndView;
     }
 
-    @RequestMapping(method = RequestMethod.GET , value = "/")
+    @RequestMapping(method = RequestMethod.GET , value = "/index")
     public ModelAndView index(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Customer customer =null;
-        if(authentication.getName()!="anonymousUser") {
+        if (!(authentication instanceof AnonymousAuthenticationToken)){
              customer = customerRepository.findByEmail(authentication.getName()).get();
         }
         ModelAndView mv = new ModelAndView("index");
