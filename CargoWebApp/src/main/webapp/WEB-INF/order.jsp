@@ -47,35 +47,31 @@
             <div class="row pt-3 m-0 flex-row fullCenter">
                 <div class="col-lg-12 no-padding">
                     <div class="form-group f-2 mt-2">
-                        <label for="country" class="required">Ölkə <span class="required">*</span></label>
-                        <select class="form-select" aria-label="Default select example" id="country">
+                        <label for="country">Ölkə</label>
+                        <select class="form-select" id="country">
                             <option value="Turkey" selected>Turkey</option>
                         </select>
-                        <small class="errorText" data-error="c_id" style="display: none;"></small>
                     </div>
                 </div>
                 <div class="col-lg-6 no-padding">
                     <div class="form-group f-3 mt-2">
-                        <label for="Orders_link" class="required">Məhsulun linki <span class="required">*</span></label>
+                        <label for="Orders_link">Məhsulun linki</label>
                         <input class="form-control b-input b-input--small" name="Orders[link]" id="Orders_link"
                                type="text">
-                        <small class="errorText" data-error="link" style="display: none;"></small>
                     </div>
                 </div>
 
-                <div class="col-lg-2 no-padding">
+                <div class="col-lg-2">
                     <div class="form-group f-2 mt-2">
-                        <label for="Orders_count" class="required">Say <span class="required">*</span></label> <input
+                        <label for="Orders_count" class="required">Say</label> <input
                             class="form-control b-input b-input--small" name="Orders[count]" id="Orders_count"
-                            type="text"> <small class="errorText" data-error="count" style="display: none;"></small>
-                    </div>
+                            type="text"></div>
                 </div>
-                <div class="col-lg-4 no-padding">
+                <div class="col-lg-4">
                     <div class="form-group f-2 mt-2">
-                        <label for="Orders_price" class="required">Qiymət <span class="required">*</span></label> <input
-                            class="form-control b-input b-input--small" min="0" value="" step="any" name="Orders[price]"
-                            id="Orders_price" type="text"> <small class="errorText" data-error="price"
-                                                                  style="display: none;"></small>
+                        <label for="Orders_price">Qiymət</label> <input
+                            class="form-control b-input b-input--small" value="" name="Orders[price]"
+                            id="Orders_price" type="text">
                     </div>
 
                     <span class="corrier-price f-1 mt-2">
@@ -85,25 +81,20 @@
 
                 <div class="col-md-12 no-padding pt-2">
                     <div class="form-group f-2 mt-2">
-                        <label class="ws-nowrap required" for="Orders_total_price">Yekun qiymət <span
-                                class="required">*</span></label> <input class="form-control b-input b-input--small"
-                                                                         value="" name="Orders[total_price]"
-                                                                         id="Orders_total_price" type="text">
-                        <small class="errorText" data-error="total_price" style="display: none;"></small>
-                    </div>
+                        <label for="Orders_total_price">Yekun qiymət</label>
+                        <input class="form-control b-input b-input--small"
+                               value="" name="Orders[total_price]"
+                               id="Orders_total_price" type="text"></div>
                     <div class="form-group f-2 mt-2">
-                        <label for="Orders_size" class="required">Ölçü <span class="required">*</span></label>
+                        <label for="Orders_size" class="required">Ölçü</label>
                         <input class="form-control b-input b-input--small" value="" name="Orders[size_str]"
-                               id="Orders_size" type="text" maxlength="255"> <small class="errorText"
-                                                                                    data-error="size_str"
-                                                                                    style="display: none;"></small>
+                               id="Orders_size" type="text">
                     </div>
 
                     <div class="form-group f-2 mt-2">
-                        <label for="Orders_color" class="required">Rəng <span class="required">*</span></label> <input
+                        <label for="Orders_color">Rəng</label> <input
                             class="form-control b-input b-input--small" name="Orders[color]" id="Orders_color"
-                            type="text" maxlength="255"> <small class="errorText" data-error="color"
-                                                                style="display: none;"></small>
+                            type="text">
                     </div>
                 </div>
             </div>
@@ -113,7 +104,6 @@
                     <div class="form-group fullWidth mt-2">
                         <label for="Orders_note">Qeyd</label> <textarea class="form-control b-textarea" rows="4"
                                                                         name="Orders[note]" id="Orders_note"></textarea>
-                        <small class="errorText" data-error="note" style="display: none;"></small>
                     </div>
                 </div>
             </div>

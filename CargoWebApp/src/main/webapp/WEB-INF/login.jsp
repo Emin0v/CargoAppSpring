@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Cargo</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -34,8 +34,8 @@
                 <%--            <p><a href="#"><small>Forgot Password ?</small></a></p>--%>
             </div>
             <div class="form-item">
-                <p class="pull-left"><a href="register"><small>Register</small></a></p>
-                <input type="submit" class="login pull-right" name="login" value="Log In">
+                <p class="pull-left"><a href="register"><small>Qeydiyyatdan keç</small></a></p>
+                <input type="submit" class="login pull-right" name="login" value="Daxil ol">
                 <div class="clear-fix"></div>
             </div>
         </div>
@@ -45,7 +45,7 @@
     if (request.getAttribute("message")!=null) {
 %>
 <script>
-    displayMessage("success" , "Successful Registration!");
+    displayMessage("success" , "Qeydiyyatdan keçdiniz!.Zəhmət olmasa giriş edin.");
 </script>
 
 <%
