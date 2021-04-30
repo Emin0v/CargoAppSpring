@@ -1,0 +1,28 @@
+
+#order-info{
+    font-family: none;
+    text-align: center;
+}
+
+.btn-bucket{
+    display: flex;
+    margin: 0 auto;
+    border: groove;
+}
+
+label{
+    font-family: cursive;
+}
+
+form{
+    background-color: darkseagreen;
+    opacity: 0.8;
+}
+
+#container{
+    margin-top: 50px;
+}
+
+.btn-bucket:hover{
+    background-color: darkseagreen;
+}

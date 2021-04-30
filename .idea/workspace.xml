@@ -28,13 +28,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b4edfb3-12ba-4eb2-9b7d-b091f67a25be" name="Default Changelist" comment="updateCustomer problem">
+      <change afterPath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/css/order.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/css/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/myorders.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +46,9 @@
       <list>
         <option value="JavaScript File" />
         <option value="Interface" />
-        <option value="CSS File" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -304,7 +301,7 @@
       <workItem from="1619679868983" duration="6235000" />
       <workItem from="1619773003506" duration="5288000" />
       <workItem from="1619789316927" duration="530000" />
-      <workItem from="1619793264853" duration="8482000" />
+      <workItem from="1619793264853" duration="12973000" />
     </task>
     <task id="LOCAL-00001" summary="profile and exit button finished">
       <created>1616956693619</created>
@@ -464,10 +461,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="313" y="108" width="831" height="489" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1619778421298" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1617984922082">
+    <state x="339" y="157" key="run.anything.popup" timestamp="1619806285734">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1617984922082" />
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1619806285734" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618239221891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
