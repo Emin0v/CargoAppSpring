@@ -14,7 +14,6 @@ let id;
 
 function addListener(orderAuth) {
     // form.addEventListener("submit", addOrder);
-    console.log("orderAuth="+orderAuth);
     storage.orderAuth=orderAuth;
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -54,7 +53,7 @@ function addOrder() {
         const newOrder = new Order(id, country, link, orderCount, price, totalPrice, size, color, note);
         UI.addOrderToBucket(newOrder);
         storage.addOrderToStorage(newOrder);
-        UI.displayMessages("Səbətə əlavə olundu", "success");
+        UI.displayMessages("Səbətə əlavə olundu", "info");
         UI.clearInputs(countryElem, ordersLink, ordersCount, ordersColor, ordersNote, ordersSize, ordersTotalPrice, ordersPrice);
 
     }

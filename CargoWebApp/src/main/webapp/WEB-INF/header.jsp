@@ -4,12 +4,12 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+<%--    <link rel="stylesheet" href="css/bootstrap.min.css">--%>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
           integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
           crossorigin="anonymous"/>
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css">
+<%--    <link rel="stylesheet" href="css/style.css">--%>
 
 </head>
 <body>
@@ -42,7 +42,7 @@
     <div class="container">
 
             <div style="font-weight: bold;font-size: 3rem; color: #ff8b00 !important;">
-                <a href="index">Cargo</a>
+                <a href="index" title="Əsas səhifə">Cargo</a>
             </div>
     </div>
 </header>

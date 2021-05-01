@@ -39,7 +39,7 @@ public class Product implements Serializable {
     @Column(name = "buy_price")
     private BigDecimal buyPrice;
     @JoinColumn(name = "productline", referencedColumnName = "productline")
-    @ManyToOne(optional = false)
+    @ManyToOne(cascade = CascadeType.ALL, optional = false)
     private Productline productline;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "productCode")
     private List<Orderdetail> orderdetailList;

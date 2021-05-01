@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ include file="header.jsp" %>
 <html>
 <head>
     <title>Title</title>
@@ -28,12 +27,14 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
      <link href="css/order.css" rel="stylesheet">
+
+
 </head>
 
-
+<%@ include file="header.jsp" %>
 <body>
 
-    <h1 id="order-info">Sifariş etmək üçün aşağıdakı xanaları doldurun </h1>
+    <h2 id="order-info">Sifariş etmək üçün aşağıdakı xanaları doldurun </h2>
 
 <button data-toggle="modal" data-target=".bd-example-modal-lg" class="btn-bucket">
     <i class="fas fa-shopping-basket fa-2x"></i>
@@ -99,12 +100,14 @@
         </div>
 
     </form>
-    <div class="row pt-3 pm-0 m-0 d-flex flex-row px-5">
+
+    <div id="message"></div>
+    <div class="row pt-3 pm-0 m-0 d-flex flex-row px-5 my-4">
         <button id="addBucket" class="btn btn-primary ml-1 mt-1">
             Səbətə əlavə et
         </button>
     </div>
-    <div id="message"></div>
+
 </div>
 
 
@@ -161,6 +164,5 @@
     </script>
 </c:if>
 
-<%--    <%@ include file="footer.jsp"%>--%>
 </body>
 </html>

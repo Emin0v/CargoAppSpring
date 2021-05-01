@@ -46,30 +46,26 @@ public class CustomerController {
         Product product = new Product();
         Productline productline = new Productline();
 
-        order.setOrderDate(new Date());
-        order.setStatus("sifariş olundu");
-        order.setComments(form.getComments());
-        order.setCustomerNumber(globalService.customerService.findById(form.getCustomerNumber()).get());
-
-        orderdetail.setCount(form.getCount());
-        orderdetail.setColor(form.getColor());
-        orderdetail.setSize(form.getSize());
-        orderdetail.setPrice(BigDecimal.valueOf(Integer.parseInt(form.getTotalPrice())));
-        orderdetail.setOrder1(order);
-        orderdetail.setProductCode(product);
+        productline.setProductline("Turkey-Azerbaijan");
+        productline.setImage(form.getImage());
 
         product.setBuyPrice(BigDecimal.valueOf(Integer.parseInt(form.getPrice())));
         product.setProductVendor(getDomainName(form.getLink()));
         product.setProductline(productline);
 
-        productline.setProductline("Turkey-Azerbaijan");
-        productline.setImage(form.getImage());
+        orderdetail.setCount(form.getCount());
+        orderdetail.setColor(form.getColor());
+        orderdetail.setSize(form.getSize());
+        orderdetail.setPrice(BigDecimal.valueOf(Integer.parseInt(form.getTotalPrice())));
+        orderdetail.setProductCode(product);
 
-        globalService.productlineService.add(productline);
-        globalService.productService.addProduct(product);
+        order.setOrderDate(new Date());
+        order.setStatus("sifariş olundu");
+        order.setComments(form.getComments());
+        order.setCustomerNumber(globalService.customerService.findById(form.getCustomerNumber()).get());
+        order.setOrderdetail(orderdetail);
+
         globalService.orderService.add(order);
-        globalService.orderdetailService.addOrderdetail(orderdetail);
-
 
         modelAndView.addObject("orderAuth",username);
         modelAndView.addObject("clearAllOrders",1);

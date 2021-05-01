@@ -35,10 +35,10 @@ public class Orderdetail implements Serializable {
     @Column(name = "price")
     private BigDecimal price;
     @JoinColumn(name = "order_number", referencedColumnName = "order_number", insertable = false, updatable = false)
-    @OneToOne(optional = false)
+    @OneToOne
     private Order1 order1;
     @JoinColumn(name = "product_code", referencedColumnName = "product_code")
-    @ManyToOne(optional = false)
+    @ManyToOne(cascade = CascadeType.ALL, optional = false)
     private Product productCode;
 
     public Orderdetail() {
