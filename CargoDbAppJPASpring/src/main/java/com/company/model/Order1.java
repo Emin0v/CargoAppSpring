@@ -1,20 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.company.model;
+
+import lombok.*;
+import org.hibernate.criterion.Order;
 
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Eminov
  */
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "`order`")
 public class Order1 implements Serializable {
 
@@ -35,7 +37,8 @@ public class Order1 implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date shippedDate;
     @Column(name = "status")
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private OrderStatus status;
     @Lob
     @Column(name = "comments")
     private String comments;
@@ -44,85 +47,6 @@ public class Order1 implements Serializable {
     private Customer customerNumber;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "order1")
     private Orderdetail orderdetail;
-
-
-    public Order1() {
-    }
-
-    public Order1(Integer orderNumber) {
-        this.orderNumber = orderNumber;
-    }
-
-    public Order1(Integer orderNumber, Date orderDate, Date requiredDate, String status) {
-        this.orderNumber = orderNumber;
-        this.orderDate = orderDate;
-        this.requiredDate = requiredDate;
-        this.status = status;
-    }
-
-    public Integer getOrderNumber() {
-        return orderNumber;
-    }
-
-    public void setOrderNumber(Integer orderNumber) {
-        this.orderNumber = orderNumber;
-    }
-
-    public Date getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
-    }
-
-    public Date getRequiredDate() {
-        return requiredDate;
-    }
-
-    public void setRequiredDate(Date requiredDate) {
-        this.requiredDate = requiredDate;
-    }
-
-    public Date getShippedDate() {
-        return shippedDate;
-    }
-
-    public void setShippedDate(Date shippedDate) {
-        this.shippedDate = shippedDate;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getComments() {
-        return comments;
-    }
-
-    public void setComments(String comments) {
-        this.comments = comments;
-    }
-
-    public Customer getCustomerNumber() {
-        return customerNumber;
-    }
-
-    public void setCustomerNumber(Customer customerNumber) {
-        this.customerNumber = customerNumber;
-    }
-
-    public Orderdetail getOrderdetail() {
-        return orderdetail;
-    }
-
-    public void setOrderdetail(Orderdetail orderdetail) {
-        this.orderdetail = orderdetail;
-    }
 
     @Override
     public int hashCode() {

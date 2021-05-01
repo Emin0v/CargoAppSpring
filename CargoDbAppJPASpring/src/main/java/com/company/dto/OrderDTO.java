@@ -1,6 +1,7 @@
 package com.company.dto;
 
 import com.company.model.Order1;
+import com.company.model.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +17,7 @@ public class OrderDTO {
     private Date orderDate;
     private Date requiredDate;
     private Date shippedDate;
-    private String status;
+    private OrderStatus status;
     private String comments;
     private OrderdetailDTO orderdetailDTO;
 

@@ -1,21 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.company.model;
+
+import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Eminov
  */
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "customer")
 public class Customer implements Serializable {
 
@@ -69,146 +70,6 @@ public class Customer implements Serializable {
             joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "customer_number")},
             inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")})
     private List<Role> roles;
-
-    public Customer() {
-    }
-
-    public Customer(Integer customerNumber) {
-        this.customerNumber = customerNumber;
-    }
-
-    public Customer(Integer customerNumber, String customerName, String customerSurname, String phone, String address, String city, String country, String email, String password) {
-        this.customerNumber = customerNumber;
-        this.customerName = customerName;
-        this.customerSurname = customerSurname;
-        this.phone = phone;
-        this.address = address;
-        this.city = city;
-        this.country = country;
-        this.email = email;
-        this.password = password;
-    }
-
-    public Integer getCustomerNumber() {
-        return customerNumber;
-    }
-
-    public void setCustomerNumber(Integer customerNumber) {
-        this.customerNumber = customerNumber;
-    }
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public String getCustomerSurname() {
-        return customerSurname;
-    }
-
-    public void setCustomerSurname(String customerSurname) {
-        this.customerSurname = customerSurname;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getPostalCode() {
-        return postalCode;
-    }
-
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public BigDecimal getCreditLimit() {
-        return creditLimit;
-    }
-
-    public void setCreditLimit(BigDecimal creditLimit) {
-        this.creditLimit = creditLimit;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Payment getPayment() {
-        return payment;
-    }
-
-    public void setPayment(Payment payment) {
-        this.payment = payment;
-    }
-
-    public Employee getSalesRepEmployeeNumber() {
-        return salesRepEmployeeNumber;
-    }
-
-    public void setSalesRepEmployeeNumber(Employee salesRepEmployeeNumber) {
-        this.salesRepEmployeeNumber = salesRepEmployeeNumber;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
-
-    @XmlTransient
-    public List<Order1> getOrder1List() {
-        return order1List;
-    }
-
-    public void setOrder1List(List<Order1> order1List) {
-        this.order1List = order1List;
-    }
 
     @Override
     public int hashCode() {

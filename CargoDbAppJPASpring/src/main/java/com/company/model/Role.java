@@ -1,5 +1,7 @@
 package com.company.model;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -8,6 +10,11 @@ import java.util.List;
  * @author Eminov
  */
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "roles")
 public class Role implements Serializable {
 
@@ -25,42 +32,6 @@ public class Role implements Serializable {
 
 //    @ManyToMany(mappedBy = "roles")
 //    private List<Employee> employees;
-
-    public Role() {
-    }
-
-    public Role(Integer id) {
-        this.id = id;
-    }
-
-    public Role(Integer id, String role) {
-        this.id = id;
-        this.role = role;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
-    public List<Customer> getCustomers() {
-        return customers;
-    }
-
-    public void setCustomers(List<Customer> customers) {
-        this.customers = customers;
-    }
 
     @Override
     public int hashCode() {

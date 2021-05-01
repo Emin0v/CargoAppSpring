@@ -1,4 +1,4 @@
-package com.company.form;
+package com.company.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

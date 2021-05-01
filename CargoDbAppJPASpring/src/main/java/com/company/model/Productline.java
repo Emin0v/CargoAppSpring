@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.company.model;
+
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -13,18 +10,19 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Eminov
  */
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "productline")
 public class Productline implements Serializable {
 
@@ -44,54 +42,6 @@ public class Productline implements Serializable {
     private String image;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "productline")
     private List<Product> productList;
-
-    public Productline() {
-    }
-
-    public Productline(String productline) {
-        this.productline = productline;
-    }
-
-    public String getProductline() {
-        return productline;
-    }
-
-    public void setProductline(String productline) {
-        this.productline = productline;
-    }
-
-    public String getTextDescription() {
-        return textDescription;
-    }
-
-    public void setTextDescription(String textDescription) {
-        this.textDescription = textDescription;
-    }
-
-    public String getHtmlDescription() {
-        return htmlDescription;
-    }
-
-    public void setHtmlDescription(String htmlDescription) {
-        this.htmlDescription = htmlDescription;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    @XmlTransient
-    public List<Product> getProductList() {
-        return productList;
-    }
-
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
-    }
 
     @Override
     public int hashCode() {

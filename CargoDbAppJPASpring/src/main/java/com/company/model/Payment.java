@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.company.model;
+
+import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -15,19 +12,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Eminov
  */
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "payment")
 public class Payment implements Serializable {
 
@@ -51,60 +50,6 @@ public class Payment implements Serializable {
     @JoinColumn(name = "customer_number", referencedColumnName = "customer_number", insertable = false, updatable = false)
     @OneToOne(optional = false)
     private Customer customer;
-
-    public Payment() {
-    }
-
-    public Payment(Integer customerNumber) {
-        this.customerNumber = customerNumber;
-    }
-
-    public Payment(Integer customerNumber, int checkNumber, Date paymentDate, BigDecimal amount) {
-        this.customerNumber = customerNumber;
-        this.checkNumber = checkNumber;
-        this.paymentDate = paymentDate;
-        this.amount = amount;
-    }
-
-    public Integer getCustomerNumber() {
-        return customerNumber;
-    }
-
-    public void setCustomerNumber(Integer customerNumber) {
-        this.customerNumber = customerNumber;
-    }
-
-    public int getCheckNumber() {
-        return checkNumber;
-    }
-
-    public void setCheckNumber(int checkNumber) {
-        this.checkNumber = checkNumber;
-    }
-
-    public Date getPaymentDate() {
-        return paymentDate;
-    }
-
-    public void setPaymentDate(Date paymentDate) {
-        this.paymentDate = paymentDate;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
 
     @Override
     public int hashCode() {
