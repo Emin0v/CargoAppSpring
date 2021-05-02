@@ -1,7 +1,7 @@
 package com.company.controller;
 
 import com.company.dao.CustomerRepository;
-import com.company.form.CustomerForm;
+import com.company.dto.CustomerForm;
 import com.company.model.Customer;
 import com.company.service.inter.CustomerServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;

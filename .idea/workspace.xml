@@ -28,25 +28,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b4edfb3-12ba-4eb2-9b7d-b091f67a25be" name="Default Changelist" comment="updateCustomer problem">
-      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/service/AuthenticationFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/service/IAuthenticationFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/exception/AuthorAlreadyExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/CargoWebApp_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/CargoWebApp_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Office.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Order1.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Order1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Orderdetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Orderdetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Productline.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Productline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/OrderServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/OrderServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/CustomerServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/CustomerServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/form/OrderForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/OrderForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/service/CustomUserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/form/CustomerForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/CustomerForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/form/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/LoginForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/form/RegisterForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/RegisterForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/service/AuthenticationFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/service/AuthenticationFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/order.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +59,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="Interface" />
         <option value="Jsp File" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -111,9 +110,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.company" />
       <recent name="com.company.service.impl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.exception" />
       <recent name="com.company.service" />
       <recent name="com.company.service.inter" />
       <recent name="com.company.dto" />
@@ -141,13 +142,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -321,7 +324,8 @@
       <workItem from="1619789316927" duration="530000" />
       <workItem from="1619793264853" duration="13134000" />
       <workItem from="1619865614514" duration="6422000" />
-      <workItem from="1619885626919" duration="7539000" />
+      <workItem from="1619885626919" duration="7580000" />
+      <workItem from="1619939138031" duration="6843000" />
     </task>
     <task id="LOCAL-00001" summary="profile and exit button finished">
       <created>1616956693619</created>
@@ -385,10 +389,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="513" y="73" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1366.728@0.0.1366.728" timestamp="1617215072238" />
+    <state x="261" y="287" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1619941677686">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="261" y="287" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1619941677686" />
     <state x="435" y="231" width="620" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617188205000">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="435" y="231" width="620" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1617188205000" />
+    <state x="435" y="244" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1619941682896">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="435" y="244" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1619941682896" />
     <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619889530860">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -22,7 +22,7 @@ public class AuthenticationFacade implements IAuthenticationFacade {
     @Override
     public Customer getCurrentUser(){
         Authentication authentication = getAuthentication();
-        Customer user = customerRepository.findByEmail(authentication.getName()).get();
-        return user;
+        Customer customer = customerRepository.findByEmail(authentication.getName()).get();
+        return customer;
     }
 }

@@ -2,10 +2,10 @@ package com.company.controller;
 
 import com.company.dao.CustomerRepository;
 import com.company.model.Customer;
+import com.company.service.IAuthenticationFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +17,9 @@ public class LoginController {
     @Autowired
     private CustomerRepository customerRepository;
 
+    @Autowired
+    private IAuthenticationFacade authenticationFacade;
+
     @RequestMapping(method = RequestMethod.GET, value = "/login")
     public ModelAndView login() {
         ModelAndView modelAndView = new ModelAndView("login");
@@ -25,7 +28,7 @@ public class LoginController {
 
     @RequestMapping(method = RequestMethod.GET , value = "/index")
     public ModelAndView index(){
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Authentication authentication = authenticationFacade.getAuthentication();
         Customer customer =null;
         if (!(authentication instanceof AnonymousAuthenticationToken)){
              customer = customerRepository.findByEmail(authentication.getName()).get();

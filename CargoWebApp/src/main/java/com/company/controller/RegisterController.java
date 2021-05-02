@@ -1,11 +1,13 @@
 package com.company.controller;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.company.dao.CustomerRepository;
-import com.company.form.RegisterForm;
+import com.company.exception.AuthorAlreadyExistException;
+import com.company.dto.RegisterForm;
 import com.company.model.Customer;
+import com.company.service.inter.CustomerServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,9 +20,8 @@ import javax.validation.Valid;
 public class RegisterController {
 
     @Autowired
-    private CustomerRepository customerRepository;
+    private CustomerServiceInter customerServiceInter;
 
-    public BCrypt.Hasher crypt = BCrypt.withDefaults();
 
     @RequestMapping(method = RequestMethod.GET, value = "/register")
     public ModelAndView registerPage() {
@@ -30,27 +31,20 @@ public class RegisterController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/register")
-    public ModelAndView addCustomer(@Valid @ModelAttribute("register") RegisterForm form, BindingResult bindingResult) {
-        ModelAndView model = new ModelAndView("register");
+    public String register(@Valid @ModelAttribute("register") RegisterForm form,
+                           BindingResult bindingResult,
+                           ModelMap modelMap) {
         if (bindingResult.hasErrors()) {
-            return model;
+            return "register";
+        }
+        try{
+             customerServiceInter.register(form);
+             modelMap.addAttribute("message", "success");
+             return "login";
+
+        }catch (AuthorAlreadyExistException authorAlreadyExistException){
+             return "register";
         }
 
-        if (form.getPassword().equals(form.getConfirmPassword())) {
-            Customer customer = form.toCustomer();
-
-            customer.setPassword(crypt.hashToString(4, form.getPassword().toCharArray()));
-
-            Customer control = customerRepository.save(customer);
-
-            if(control!=null){
-                ModelAndView success = new ModelAndView("login");
-                success.addObject("message","success");
-                return success;
-            }
-
-        }
-
-        return model;
     }
 }

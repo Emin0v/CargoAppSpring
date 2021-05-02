@@ -158,7 +158,7 @@
     addListener('${orderAuth}');
 </script>
 
-<c:if test="${clearAllOrders==1}">
+<c:if test="${clearAllOrders}">
     <script>
         storage.clearAllOrdersFromStorage();
     </script>

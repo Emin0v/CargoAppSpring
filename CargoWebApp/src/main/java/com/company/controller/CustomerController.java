@@ -3,9 +3,8 @@ package com.company.controller;
 import com.company.dto.OrderForm;
 import com.company.model.*;
 import com.company.service.GlobalService;
+import com.company.service.IAuthenticationFacade;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,28 +16,27 @@ public class CustomerController {
     @Autowired
     private GlobalService globalService;
 
-    private String username;
+    @Autowired
+    private IAuthenticationFacade authenticationFacade;
 
     @RequestMapping(method = RequestMethod.GET, value = "/order")
     public ModelAndView indexOrder() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        username=authentication.getName();
-
+        Customer customer = authenticationFacade.getCurrentUser();
         ModelAndView modelAndView = new ModelAndView("order");
 
-        modelAndView.addObject("orderAuth",username);
-        modelAndView.addObject("user",globalService.customerService.findByEmail(username).get());
+        modelAndView.addObject("orderAuth",customer.getEmail());
+        modelAndView.addObject("user",customer);
         return modelAndView;
     }
 
     @RequestMapping(method = RequestMethod.POST , value = "/order")
     public ModelAndView toOrder(OrderForm form){
+        Customer customer = authenticationFacade.getCurrentUser();
         ModelAndView modelAndView = new ModelAndView("order");
         globalService.orderService.order(form);
 
-        modelAndView.addObject("orderAuth",username);
-        modelAndView.addObject("clearAllOrders",1);
-
+        modelAndView.addObject("orderAuth",customer.getEmail());
+        modelAndView.addObject("clearAllOrders",true);
         return modelAndView;
     }
 

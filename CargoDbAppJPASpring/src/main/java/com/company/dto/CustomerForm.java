@@ -1,18 +1,22 @@
-package com.company.form;
+package com.company.dto;
 
 import com.company.model.Customer;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-@Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class RegisterForm extends LoginForm {
+@Getter
+@Setter
+@NoArgsConstructor
+public class CustomerForm {
 
+    private Integer customerNumber;
     @NotBlank
     @Size(min = 2)
     private String customerName;
@@ -22,6 +26,9 @@ public class RegisterForm extends LoginForm {
     @NotBlank
     private String phone;
     @NotBlank
+    @Email
+    private String email;
+    @NotBlank
     private String address;
     @NotBlank
     private String city;
@@ -29,9 +36,18 @@ public class RegisterForm extends LoginForm {
     private String country;
     @NotBlank
     private String postalCode;
-    @NotBlank
-    private String confirmPassword;
 
+    public CustomerForm(Customer customer){
+        this.customerNumber = customer.getCustomerNumber();
+        this.customerName = customer.getCustomerName();
+        this.customerSurname = customer.getCustomerSurname();
+        this.phone = customer.getPhone();
+        this.email = customer.getEmail();
+        this.address = customer.getAddress();
+        this.city = customer.getCity();
+        this.country = customer.getCountry();
+        this.postalCode = customer.getPostalCode();
+    }
 
     public Customer toCustomer(){
         Customer customer = new Customer();
@@ -44,7 +60,6 @@ public class RegisterForm extends LoginForm {
         customer.setCity(getCity());
         customer.setCountry(getCountry());
         customer.setEmail(getEmail());
-        customer.setPassword(getPassword());
 
         return customer;
     }
