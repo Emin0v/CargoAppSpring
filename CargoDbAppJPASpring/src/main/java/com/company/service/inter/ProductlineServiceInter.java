@@ -1,10 +1,11 @@
 package com.company.service.inter;
 
+import com.company.dto.ProductlineDTO;
 import com.company.model.Productline;
 
 public interface ProductlineServiceInter {
 
-    public Productline add(Productline productline);
+    public boolean add(Productline productline);
 
-    public Productline getProductline(String productline);
+    public ProductlineDTO getProductline(String productline);
 }

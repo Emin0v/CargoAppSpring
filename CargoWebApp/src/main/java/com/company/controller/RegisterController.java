@@ -1,9 +1,7 @@
 package com.company.controller;
 
-import com.company.dao.CustomerRepository;
 import com.company.exception.AuthorAlreadyExistException;
 import com.company.dto.RegisterForm;
-import com.company.model.Customer;
 import com.company.service.inter.CustomerServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,12 +24,12 @@ public class RegisterController {
     @RequestMapping(method = RequestMethod.GET, value = "/register")
     public ModelAndView registerPage() {
         ModelAndView modelAndView = new ModelAndView("register");
-        modelAndView.addObject("register", new RegisterForm());
+        modelAndView.addObject("registerForm", new RegisterForm());
         return modelAndView;
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/register")
-    public String register(@Valid @ModelAttribute("register") RegisterForm form,
+    public String register(@Valid @ModelAttribute("registerForm") RegisterForm form,
                            BindingResult bindingResult,
                            ModelMap modelMap) {
         if (bindingResult.hasErrors()) {

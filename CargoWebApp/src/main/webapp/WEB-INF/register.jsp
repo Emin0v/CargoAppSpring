@@ -12,16 +12,31 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 
-    <script src="js/register.js"></script>
     <link rel="stylesheet" href="css/register.css">
+
+    <script>
+        function check() {
+            if (document.getElementById('password').value ==
+                document.getElementById('confirm_password').value) {
+                document.getElementById('errmessage').style.color = 'green';
+                document.getElementById('errmessage').innerHTML = 'uyğun';
+            } else {
+                document.getElementById('errmessage').style.color = 'red';
+                document.getElementById('errmessage').innerHTML = 'uyğun deyil';
+            }
+        };
+
+    </script>
 
 </head>
 <body style="background-repeat: no-repeat;background-image: url('./images/cargo.jpg')">
+
+<%@ include file="header.jsp" %>
 <div id="message">
 
 </div>
 <div class="container" id="container">
-    <f:form action="register" method="post" class="form-horizontal" role="form" modelAttribute="register">
+    <f:form action="register" method="post" class="form-horizontal" role="form" modelAttribute="registerForm">
         <h2>Qeydiyyat</h2>
         <div class="form-row">
             <div class="form-group col-md-6">
@@ -67,7 +82,7 @@
             </div>
 
             <div class="form-group col-md-6">
-                <label for="email" class="col-sm-5 control-label">Email</label>
+                <label for="email" class="col-sm-5 control-label">E-Poçt</label>
 
                 <f:input path="email" type="email" id="email" placeholder="..." class="form-control" name="email"/>
                 <f:errors path="email" cssClass="error"/>
@@ -81,22 +96,24 @@
                 <f:errors path="phone" cssClass="error"/>
             </div>
             <div class="form-group col-md-6">
-                <label for="password" class="col-sm-5 control-label">Password</label>
+                <label for="password" class="col-sm-5 control-label">Şifrə</label>
 
-                <f:input path="password" type="password" id="password" placeholder="..." class="form-control"/>
+                <f:input path="password" type="password" id="password" placeholder="..." onkeyup='check();' class="form-control"/>
                 <f:errors path="password" cssClass="error"/>
             </div>
             <div class="form-group col-md-6">
-                <label for="password" class="col-sm-7 control-label">Confirm Password</label>
+                <label for="password" class="col-sm-7 control-label">Şifrə(Təkrar)</label>
 
-                <f:input path="confirmPassword" type="password" id="password" placeholder="..."
+                <input name="confirmPassword" type="password" id="confirm_password" onkeyup='check();' placeholder="..."
                          class="form-control"/>
-                <f:errors path="confirmPassword" cssClass="error"/>
+                <span id='errmessage'></span>
             </div>
         </div>
+
+        <button type="submit" id="confirm" class="btn btn-primary btn-block">Təsdiq</button>
+        <p class="pull-left" style="font-size: 20px;"><a href="login"><small>Geri</small></a></p>
     </f:form>
-    <button type="submit" id="confirm" class="btn btn-primary btn-block">Təsdiq</button>
-    <p class="pull-left" style="font-size: 20px;"><a href="login"><small>Geri</small></a></p>
+
 </div>
 </body>
 </html>

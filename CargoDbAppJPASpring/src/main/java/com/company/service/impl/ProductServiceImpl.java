@@ -1,6 +1,7 @@
 package com.company.service.impl;
 
 import com.company.dao.ProductRepository;
+import com.company.dto.ProductDTO;
 import com.company.model.Product;
 import com.company.service.inter.ProductServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +16,14 @@ public class ProductServiceImpl implements ProductServiceInter {
     private ProductRepository repository;
 
     @Override
-    public Product addProduct(Product product) {
-         return repository.save(product);
+    public boolean addProduct(Product product) {
+        repository.save(product);
+        return true;
     }
 
     @Override
-    public Product getProduct(int productNumber) {
-        return repository.findById(productNumber).get();
+    public ProductDTO getProduct(int productNumber) {
+        Product product = repository.findById(productNumber).get();
+        return new ProductDTO(product);
     }
 }

@@ -2,6 +2,7 @@ package com.company.service.impl;
 
 import com.company.dao.CustomerRepository;
 import com.company.dao.OrderRepository;
+import com.company.dto.OrderDTO;
 import com.company.dto.OrderForm;
 import com.company.model.*;
 import com.company.service.inter.OrderServiceInter;
@@ -24,17 +25,19 @@ public class OrderServiceImpl implements OrderServiceInter {
     @Autowired
     private CustomerRepository customerRepository;
 
-    public Order1 add(Order1 order){
-        return orderRepository.save(order);
+    public boolean add(Order1 order) {
+        orderRepository.save(order);
+        return true;
     }
 
     @Override
-    public Order1 getOrder(int orderNumber) {
-       return orderRepository.findById(orderNumber).get();
+    public OrderDTO getOrder(int orderNumber) {
+        Order1 order = orderRepository.findById(orderNumber).get();
+        return new OrderDTO(order);
     }
 
     @Override
-    public boolean order(OrderForm form){
+    public boolean order(OrderForm form) {
 
         Productline productline = Productline
                 .builder()
@@ -72,12 +75,12 @@ public class OrderServiceImpl implements OrderServiceInter {
         return true;
     }
 
-    private static String getDomainName(String url){
+    private static String getDomainName(String url) {
         try {
             URI uri = new URI(url);
             String domain = uri.getHost();
             return domain.startsWith("www.") ? domain.substring(4) : domain;
-        }catch (URISyntaxException ex){
+        } catch (URISyntaxException ex) {
             ex.printStackTrace();
             return url;
         }

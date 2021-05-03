@@ -28,24 +28,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b4edfb3-12ba-4eb2-9b7d-b091f67a25be" name="Default Changelist" comment="updateCustomer problem">
-      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/exception/AuthorAlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_0_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/CargoWebApp_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/CargoWebApp_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dao/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/CustomerServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/CustomerServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/LoginForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/RegisterForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/RegisterForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/OrderdetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/OrderdetailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/ProductlineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/impl/ProductlineServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/OrderServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/OrderServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/OrderdetailServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/OrderdetailServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/ProductServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/ProductServiceInter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/ProductlineServiceInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/service/inter/ProductlineServiceInter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CargoWebApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/ProfileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/form/CustomerForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/CustomerForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/form/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/LoginForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/form/RegisterForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoDbAppJPASpring/src/main/java/com/company/dto/RegisterForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/service/AuthenticationFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/java/com/company/service/AuthenticationFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/resources/static/css/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/CargoWebApp/src/main/webapp/WEB-INF/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +63,8 @@
         <option value="JavaScript File" />
         <option value="Jsp File" />
         <option value="CSS File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -325,7 +327,10 @@
       <workItem from="1619793264853" duration="13134000" />
       <workItem from="1619865614514" duration="6422000" />
       <workItem from="1619885626919" duration="7580000" />
-      <workItem from="1619939138031" duration="6843000" />
+      <workItem from="1619939138031" duration="7260000" />
+      <workItem from="1619972348151" duration="7288000" />
+      <workItem from="1620027399991" duration="5134000" />
+      <workItem from="1620044713115" duration="3024000" />
     </task>
     <task id="LOCAL-00001" summary="profile and exit button finished">
       <created>1616956693619</created>
@@ -421,54 +426,54 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="507" y="281" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1619195347763" />
-    <state width="1065" height="555" key="GridCell.Tab.0.bottom" timestamp="1619872059088">
+    <state width="1322" height="339" key="GridCell.Tab.0.bottom" timestamp="1619979657974">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619872059088" />
-    <state width="1065" height="555" key="GridCell.Tab.0.center" timestamp="1619872059087">
+    <state width="1322" height="339" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619979657974" />
+    <state width="1322" height="339" key="GridCell.Tab.0.center" timestamp="1619979657973">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619872059087" />
-    <state width="1065" height="555" key="GridCell.Tab.0.left" timestamp="1619872059087">
+    <state width="1322" height="339" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619979657973" />
+    <state width="1322" height="339" key="GridCell.Tab.0.left" timestamp="1619979657973">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619872059087" />
-    <state width="1065" height="555" key="GridCell.Tab.0.right" timestamp="1619872059087">
+    <state width="1322" height="339" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619979657973" />
+    <state width="1322" height="339" key="GridCell.Tab.0.right" timestamp="1619979657973">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619872059087" />
-    <state width="1065" height="555" key="GridCell.Tab.1.bottom" timestamp="1619872059090">
+    <state width="1322" height="339" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619979657973" />
+    <state width="1065" height="555" key="GridCell.Tab.1.bottom" timestamp="1619979657962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619872059090" />
-    <state width="1065" height="555" key="GridCell.Tab.1.center" timestamp="1619872059090">
+    <state width="1065" height="555" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619979657962" />
+    <state width="1065" height="555" key="GridCell.Tab.1.center" timestamp="1619979657962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1619872059090" />
-    <state width="1065" height="555" key="GridCell.Tab.1.left" timestamp="1619872059089">
+    <state width="1065" height="555" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1619979657962" />
+    <state width="1065" height="555" key="GridCell.Tab.1.left" timestamp="1619979657961">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1619872059089" />
-    <state width="1065" height="555" key="GridCell.Tab.1.right" timestamp="1619872059090">
+    <state width="1065" height="555" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1619979657961" />
+    <state width="1065" height="555" key="GridCell.Tab.1.right" timestamp="1619979657962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1619872059090" />
-    <state width="1065" height="555" key="GridCell.Tab.2.bottom" timestamp="1619872059089">
+    <state width="1065" height="555" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1619979657962" />
+    <state width="1065" height="555" key="GridCell.Tab.2.bottom" timestamp="1619979657963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619872059089" />
-    <state width="1065" height="555" key="GridCell.Tab.2.center" timestamp="1619872059088">
+    <state width="1065" height="555" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619979657963" />
+    <state width="1065" height="555" key="GridCell.Tab.2.center" timestamp="1619979657963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1619872059088" />
-    <state width="1065" height="555" key="GridCell.Tab.2.left" timestamp="1619872059088">
+    <state width="1065" height="555" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1619979657963" />
+    <state width="1065" height="555" key="GridCell.Tab.2.left" timestamp="1619979657963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1619872059088" />
-    <state width="1065" height="555" key="GridCell.Tab.2.right" timestamp="1619872059089">
+    <state width="1065" height="555" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1619979657963" />
+    <state width="1065" height="555" key="GridCell.Tab.2.right" timestamp="1619979657963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1065" height="555" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1619872059089" />
+    <state width="1065" height="555" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1619979657963" />
     <state x="213" y="17" key="Maven.ArtifactSearchDialog" timestamp="1619114323731">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -493,10 +498,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="313" y="108" width="831" height="489" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1619778421298" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1619806285734">
+    <state x="339" y="157" key="run.anything.popup" timestamp="1620046642996">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1619806285734" />
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1620046642996" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618239221891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

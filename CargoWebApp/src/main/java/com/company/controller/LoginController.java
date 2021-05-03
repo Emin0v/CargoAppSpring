@@ -1,6 +1,7 @@
 package com.company.controller;
 
 import com.company.dao.CustomerRepository;
+import com.company.dto.CustomerDTO;
 import com.company.model.Customer;
 import com.company.service.IAuthenticationFacade;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +30,9 @@ public class LoginController {
     @RequestMapping(method = RequestMethod.GET , value = "/index")
     public ModelAndView index(){
         Authentication authentication = authenticationFacade.getAuthentication();
-        Customer customer =null;
+        CustomerDTO customer =null;
         if (!(authentication instanceof AnonymousAuthenticationToken)){
-             customer = customerRepository.findByEmail(authentication.getName()).get();
+             customer = new CustomerDTO(customerRepository.findByEmail(authentication.getName()).get());
         }
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("customer",customer);

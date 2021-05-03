@@ -16,7 +16,7 @@ public class LoginForm {
     private String email;
 
     @NotBlank
-    @Size(min = 6)
+    @Size(min = 6,max = 30)
     private String password;
 
 }

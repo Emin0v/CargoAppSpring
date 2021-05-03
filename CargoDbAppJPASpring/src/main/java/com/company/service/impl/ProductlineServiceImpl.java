@@ -1,6 +1,7 @@
 package com.company.service.impl;
 
 import com.company.dao.ProductlineRepository;
+import com.company.dto.ProductlineDTO;
 import com.company.model.Productline;
 import com.company.service.inter.ProductlineServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +16,14 @@ public class ProductlineServiceImpl implements ProductlineServiceInter {
     private ProductlineRepository repository;
 
     @Override
-    public Productline add(Productline productline) {
-        return repository.save(productline);
+    public boolean add(Productline productline) {
+        repository.save(productline);
+        return true;
     }
 
     @Override
-    public Productline getProductline(String productline) {
-        return repository.findById(productline).get();
+    public ProductlineDTO getProductline(String productline) {
+        Productline productlineDb = repository.findById(productline).get();
+        return new ProductlineDTO(productlineDb);
     }
 }

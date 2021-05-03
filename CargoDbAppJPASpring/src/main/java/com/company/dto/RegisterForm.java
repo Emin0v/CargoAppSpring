@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Data
@@ -13,21 +13,21 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 public class RegisterForm extends LoginForm {
 
-    @NotBlank
-    @Size(min = 2)
+    @NotNull(message = "Adınızı daxil edin")
+    @Size(min = 2,max = 30)
     private String customerName;
-    @NotBlank
-    @Size(min = 2)
+    @NotNull
+    @Size(min = 2,max = 30)
     private String customerSurname;
-    @NotBlank
+    @NotNull(message = "Telefon nömrəsini daxil edin")
     private String phone;
-    @NotBlank
+    @NotNull
     private String address;
-    @NotBlank
+    @NotNull
     private String city;
-    @NotBlank
+    @NotNull
     private String country;
-    @NotBlank
+    @NotNull
     private String postalCode;
 
 
