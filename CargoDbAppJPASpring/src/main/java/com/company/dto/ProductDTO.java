@@ -17,7 +17,7 @@ public class ProductDTO {
     private String productVendor;
     private String productDescription;
     private BigDecimal buyPrice;
-    private ProductlineDTO productline;
+    private byte[] image;
 
     public ProductDTO(Product product){
         this.productCode = product.getProductCode();
@@ -25,7 +25,7 @@ public class ProductDTO {
         this.productVendor = product.getProductVendor();
         this.productDescription = product.getProductDescription();
         this.buyPrice = product.getBuyPrice();
-        this.productline = new ProductlineDTO(product.getProductline());
+        this.image = product.getImage();
     }
 
 }

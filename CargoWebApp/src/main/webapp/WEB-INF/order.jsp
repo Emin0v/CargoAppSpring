@@ -28,6 +28,14 @@
 
      <link href="css/order.css" rel="stylesheet">
 
+    <script>
+        function totalPrice(){
+            const price = Number(document.getElementById("Orders_price").value);
+            const totalPrice = (price/20 + price);
+            document.getElementById("Orders_total_price").value=totalPrice;
+        }
+    </script>
+
 
 </head>
 
@@ -66,7 +74,7 @@
             <div class="form-group col-md-4 px-4">
                 <label for="Orders_price">Qiymət</label>
                 <input class="form-control b-input b-input--small" value="" name="Orders[price]"
-                       id="Orders_price" type="text">
+                       id="Orders_price" type="text" onkeyup="totalPrice();">
 
                 <span class="corrier-price f-1 mt-2">
             					+5%
@@ -77,7 +85,7 @@
                 <label for="Orders_total_price">Yekun qiymət</label>
                 <input class="form-control b-input b-input--small"
                        value="" name="Orders[total_price]"
-                       id="Orders_total_price" type="text">
+                       id="Orders_total_price" type="text" disabled>
             </div>
             <div class="form-group col-md-4 mx-auto">
                 <label for="Orders_size" class="required">Ölçü</label>

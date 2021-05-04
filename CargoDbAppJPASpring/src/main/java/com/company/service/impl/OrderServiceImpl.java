@@ -39,17 +39,10 @@ public class OrderServiceImpl implements OrderServiceInter {
     @Override
     public boolean order(OrderForm form) {
 
-        Productline productline = Productline
-                .builder()
-                .productline("Turkey-Azerbaijan")
-                .image(form.getImage())
-                .build();
-
         Product product = Product
                 .builder()
-                .buyPrice(BigDecimal.valueOf(Integer.parseInt(form.getPrice())))
+                .buyPrice(BigDecimal.valueOf(Double.parseDouble(form.getPrice())))
                 .productVendor(getDomainName(form.getLink()))
-                .productline(productline)
                 .build();
 
         Orderdetail orderdetail = Orderdetail
@@ -57,7 +50,7 @@ public class OrderServiceImpl implements OrderServiceInter {
                 .count(form.getCount())
                 .color(form.getColor())
                 .size(form.getSize())
-                .price(BigDecimal.valueOf(Integer.parseInt(form.getTotalPrice())))
+                .price(BigDecimal.valueOf(Double.parseDouble(form.getTotalPrice())))
                 .productCode(product)
                 .build();
 

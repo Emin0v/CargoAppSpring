@@ -4,6 +4,7 @@ import com.company.dao.CustomerRepository;
 import com.company.dto.CustomerForm;
 import com.company.model.Customer;
 import com.company.service.inter.CustomerServiceInter;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -24,6 +25,9 @@ public class CustomerController {
 
     @Autowired
     private CustomerRepository repository;
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     @RequestMapping(method = RequestMethod.GET, value = "/profile")
     public ModelAndView profile() {
@@ -46,7 +50,7 @@ public class CustomerController {
         }
         Customer dbCustomer = repository.findById(form.getCustomerNumber()).get();
 
-        Customer customer = form.toCustomer();
+        Customer customer = modelMapper.map(form,Customer.class);
         customer.setPassword(dbCustomer.getPassword());
 
         Boolean control = service.updateCustomer(customer);

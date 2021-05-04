@@ -4,6 +4,7 @@ import com.company.dao.CustomerRepository;
 import com.company.dto.CustomerDTO;
 import com.company.model.Customer;
 import com.company.service.IAuthenticationFacade;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -19,6 +20,9 @@ public class LoginController {
     private CustomerRepository customerRepository;
 
     @Autowired
+    private ModelMapper modelMapper;
+
+    @Autowired
     private IAuthenticationFacade authenticationFacade;
 
     @RequestMapping(method = RequestMethod.GET, value = "/login")
@@ -32,7 +36,8 @@ public class LoginController {
         Authentication authentication = authenticationFacade.getAuthentication();
         CustomerDTO customer =null;
         if (!(authentication instanceof AnonymousAuthenticationToken)){
-             customer = new CustomerDTO(customerRepository.findByEmail(authentication.getName()).get());
+            Customer customerDb = customerRepository.findByEmail(authentication.getName()).get();
+            customer = modelMapper.map(customerDb,CustomerDTO.class);
         }
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("customer",customer);

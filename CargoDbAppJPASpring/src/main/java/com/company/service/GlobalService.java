@@ -25,7 +25,4 @@ public class GlobalService {
     @Autowired
     public ProductServiceInter productService;
 
-    @Autowired
-    public ProductlineServiceInter productlineService;
-
 }

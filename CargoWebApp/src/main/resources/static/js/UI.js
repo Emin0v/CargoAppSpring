@@ -14,7 +14,7 @@ class UI {
            <td><input type="hidden" name="count" value="${order.orderCount}">${order.orderCount}</td>
            <td><input type="hidden" name="color" value="${order.color}">${order.color}</td>
            <td><input type="hidden" name="size" value="${order.size}">${order.size}</td>
-           <input type="hidden" name="note" value="${order.note}">
+           <input type="hidden" name="comments" value="${order.note}">
            <td>
                  <button class="btn btn-danger" id = "delete-order" type="submit">
                             <i class="fas fa-trash-alt"></i>

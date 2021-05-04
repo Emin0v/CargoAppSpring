@@ -38,11 +38,11 @@ public class Product implements Serializable {
     @Basic(optional = false)
     @Column(name = "buy_price")
     private BigDecimal buyPrice;
-    @JoinColumn(name = "productline", referencedColumnName = "productline")
-    @ManyToOne(cascade = CascadeType.ALL, optional = false)
-    private Productline productline;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "productCode")
     private List<Orderdetail> orderdetailList;
+    @Lob
+    @Column(name = "image",length=100000)
+    private byte[] image;
 
     @Override
     public int hashCode() {
