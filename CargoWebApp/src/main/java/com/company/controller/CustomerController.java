@@ -1,9 +1,10 @@
 package com.company.controller;
 
-import com.company.dao.CustomerRepository;
 import com.company.dto.CustomerForm;
+import com.company.dto.OrderDTO;
 import com.company.model.Customer;
 import com.company.service.inter.CustomerServiceInter;
+import com.company.service.inter.OrderServiceInter;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -13,28 +14,40 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 public class CustomerController {
 
     @Autowired
-    private CustomerServiceInter service;
+    private CustomerServiceInter customerService;
 
     @Autowired
-    private CustomerRepository repository;
+    private OrderServiceInter orderService;
 
     @Autowired
     private ModelMapper modelMapper;
+
+    @RequestMapping(method = RequestMethod.GET , value = "/myorders")
+    public ModelAndView showMyOrders(@RequestParam(value = "userId") String userIdStr){
+        ModelAndView model = new ModelAndView("myorders");
+        Integer userId = Integer.valueOf(userIdStr);
+        List<OrderDTO> orderDTOList = orderService.findByCustomerNumber(userId);
+        model.addObject("orders",orderDTOList);
+
+        return model;
+    }
 
     @RequestMapping(method = RequestMethod.GET, value = "/profile")
     public ModelAndView profile() {
         ModelAndView model = new ModelAndView("profile");
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        Customer customer = repository.findByEmail(authentication.getName()).get();
+        Customer customer = customerService.findByEmail(authentication.getName()).get();
 
         model.addObject("customer", new CustomerForm(customer));
         model.addObject("profileform", new CustomerForm(customer));
@@ -48,12 +61,12 @@ public class CustomerController {
         if (bindingResult.hasErrors()) {
             return model;
         }
-        Customer dbCustomer = repository.findById(form.getCustomerNumber()).get();
+        Customer dbCustomer = customerService.findById(form.getCustomerNumber()).get();
 
         Customer customer = modelMapper.map(form,Customer.class);
         customer.setPassword(dbCustomer.getPassword());
 
-        Boolean control = service.updateCustomer(customer);
+        Boolean control = customerService.updateCustomer(customer);
 
         if (control) {
             model.addObject("message", "success");

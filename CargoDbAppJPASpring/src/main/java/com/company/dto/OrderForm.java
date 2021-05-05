@@ -16,7 +16,6 @@ public class OrderForm {
     private Date orderDate;
     private String status;
 
-
     private String color;
     private String size;
     private Integer count;

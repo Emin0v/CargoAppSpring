@@ -19,6 +19,7 @@ public class OrderDTO {
     private Date shippedDate;
     private OrderStatus status;
     private String comments;
+    private String link;
     private OrderdetailDTO orderdetailDTO;
 
     public OrderDTO(Order1 order){
@@ -28,6 +29,7 @@ public class OrderDTO {
         this.shippedDate = order.getShippedDate();
         this.status = order.getStatus();
         this.comments = order.getComments();
+        this.link = order.getLink();
         this.orderdetailDTO = new OrderdetailDTO(order.getOrderdetail());
     }
 

@@ -6,6 +6,7 @@ import com.company.dto.OrderDTO;
 import com.company.dto.OrderForm;
 import com.company.model.*;
 import com.company.service.inter.OrderServiceInter;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +15,8 @@ import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -59,6 +62,7 @@ public class OrderServiceImpl implements OrderServiceInter {
                 .orderDate(new Date())
                 .status(OrderStatus.ORDERED)
                 .comments(form.getComments())
+                .link(form.getLink())
                 .customerNumber(customerRepository.findById(form.getCustomerNumber()).get())
                 .orderdetail(orderdetail)
                 .build();
@@ -66,6 +70,16 @@ public class OrderServiceImpl implements OrderServiceInter {
         add(order);
 
         return true;
+    }
+
+    @Override
+    public List<OrderDTO> findByCustomerNumber(Integer customerNumber) {
+        Customer customer = customerRepository.findById(customerNumber).get();
+        List<Order1> orderList = orderRepository.findByCustomerNumber(customer);
+
+        return orderList.stream().map(OrderDTO::new)
+                .collect(Collectors.toList());
+
     }
 
     private static String getDomainName(String url) {

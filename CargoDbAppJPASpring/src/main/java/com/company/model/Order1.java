@@ -39,6 +39,9 @@ public class Order1 implements Serializable {
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
+    @Column(name = "link")
+    @Basic(optional = false)
+    private String link;
     @Lob
     @Column(name = "comments")
     private String comments;

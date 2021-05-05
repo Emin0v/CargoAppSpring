@@ -7,20 +7,20 @@ class UI {
         <tr>
            <td>${order.id}</td>
            <td><input type="hidden" name="image" value="${order.link}"><img src="${order.link}" class="img-fluid img-thumbnail"></td>
-           <td><input type="hidden" name="link" value="${order.link}"><a href="${order.link}" target="_blank">${order.link}</a></td> 
+           <td style=" font-size: xx-small;width: 20px;line-break: anywhere;"><input type="hidden" name="link" value="${order.link}"><a href="${order.link}" target="_blank">${order.link}</a></td> 
            <td><input type="hidden" name="country" value="${order.country}">${order.country}</td>
            <td><input type="hidden" name="price" value="${order.price}">${order.price}</td>
            <td><input type="hidden" name="totalPrice" value="${order.totalPrice}">${order.totalPrice}</td>
            <td><input type="hidden" name="count" value="${order.orderCount}">${order.orderCount}</td>
            <td><input type="hidden" name="color" value="${order.color}">${order.color}</td>
            <td><input type="hidden" name="size" value="${order.size}">${order.size}</td>
-           <input type="hidden" name="comments" value="${order.note}">
            <td>
-                 <button class="btn btn-danger" id = "delete-order" type="submit">
+                 <button class="btn btn-danger" id = "delete-order" type="button">
                             <i class="fas fa-trash-alt"></i>
                  </button>
            </td>
         </tr>   
+        <input type="hidden" name="comments" value="${order.note}">
         `;
 
         trElem.innerHTML += elements;
@@ -66,13 +66,13 @@ class UI {
            <td><input type="hidden" name="count" value="${order.orderCount}">${order.orderCount}</td>
            <td><input type="hidden" name="color" value="${order.color}">${order.color}</td>
            <td><input type="hidden" name="size" value="${order.size}">${order.size}</td>
-           <input type="hidden" name="comments" value="${order.note}">
            <td>
-                 <button class="btn btn-danger" id = "delete-order" type="submit">
+                 <button class="btn btn-danger" id = "delete-order" type="button">
                             <i class="fas fa-trash-alt"></i>
                  </button>
            </td>
-        </tr>     
+        </tr>   
+        <input type="hidden" name="comments" value="${order.note}">  
          `;
 
         });

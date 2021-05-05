@@ -131,7 +131,8 @@
                                     ${customer.customerName}
                                 </button>
                                 <ul class="dropdown arrow-top">
-                                    <li><a href="profile" class="nav-link">Profile</a></li>
+                                    <li><a href="profile" class="nav-link">Profil</a></li>
+                                    <li><a href="myorders?userId=${customer.customerNumber}" class="nav-link">Sifarişlərim</a></li>
                                     <li><a href="logout" class="nav-link">Çıxış</a></li>
                                 </ul>
                             </li>
@@ -164,7 +165,7 @@
                             fugit modi similique, suscipit, deserunt a iure.</p>
                         <form action="#">
                             <div class="form-group d-flex">
-                                <input type="text" class="form-control" placeholder="izləmə nömrəsi">
+                                <input type="text" class="form-control" name="trackingNumber" value="" placeholder="izləmə nömrəsi">
                                 <input type="submit" class="btn btn-primary text-white px-4" value="İndi izləyin">
                             </div>
                         </form>
@@ -639,3 +640,4 @@
 <script src="js/main.js"></script>
 
 </html>
+
